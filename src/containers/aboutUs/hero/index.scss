@@ -1,0 +1,9 @@
+.common-hero-main-container {
+  @media (min-width: 1024px) {
+    margin-bottom: -35px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: -60px;
+  }
+}

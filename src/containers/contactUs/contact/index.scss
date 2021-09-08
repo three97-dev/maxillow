@@ -1,0 +1,8 @@
+.contact-hero-image {
+  @media (min-width: 1280px) {
+    transform: translateY(-15px) scale(1.3);
+  }
+  @media (min-width: 1024px) {
+    transform: translateY(-25px) scale(1.2);
+  }
+}

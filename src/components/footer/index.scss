@@ -1,0 +1,12 @@
+.footer-nav-link {
+  &:not(:first-child) {
+    margin-top: 35px;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 0px !important;
+    &:not(:last-child) {
+      margin-right: 75px;
+    }
+  }
+}

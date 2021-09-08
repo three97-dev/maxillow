@@ -1,0 +1,29 @@
+.procedure-intro-container {
+  background-position-x: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../../../images/proceduresBgImage.png);
+
+  @media (max-width: 1023px) {
+    background-image: unset;
+  }
+}
+
+.procedures-container {
+  position: relative;
+  @media (min-width: 1024px) {
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      background-color: rgba($color: #2fbfcc, $alpha: 0.15);
+      // filter: blur(1px);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+      border-radius: 10px;
+    }
+  }
+}

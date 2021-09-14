@@ -1,33 +1,39 @@
-import React from "react"
-import Slider from "./Slider"
+import React from "react";
+import Slider from "./Slider";
 
 function SliderSection(props) {
-  let slides = props.data.edges
+  let slides = props.data.edges;
 
   return (
-    <div className="home-slider-main-container global-x-spacing pt-24" id="home-testimonials">
+    <div
+      className="home-slider-main-container px-[30px] pt-[50px] md:px-20 lg:px-[30px]"
+      id="home-testimonials"
+    >
       <div>
-        <h3 className="text-center pb-6 md:pb-48 lg:pb-12 xl:pb-0">
+        <h3 className="text-center pb-[50px] lg:hidden">
           Kind Words From Our Patients
         </h3>
-        <div className="flex items-end">
-          <div className="hidden lg:block w-5/12">
+        <div className="flex lg:justify-start xl:gap-7 items-end">
+          <div className="hidden lg:block relative left-[-85px]">
             <img
               src={props.src}
-              className="home-slider-image mx-auto xl:-mt-16"
+              className="home-slider-image lg:max-w-[420px] xl:max-w-[572px]"
               loading="lazy"
               alt=""
             />
           </div>
-          <div className="w-full lg:w-7/12">
-            <div className="md:mx-10 lg:mx-16 xl:mx-24 mb-12 md:mb-24 lg:mb-16 xl:mb-20 relative">
+          <div className="w-full lg:w-auto lg:flex-1">
+            <h3 className="hidden lg:block pb-[50px]">
+              Kind Words From Our Patients
+            </h3>
+            <div className="lg:max-w-[450px] xl:max-w-[530px] mb-[55px] lg:mb-0 lg:pb-[50px] relative">
               <Slider slides={slides} />
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default SliderSection
+export default SliderSection;

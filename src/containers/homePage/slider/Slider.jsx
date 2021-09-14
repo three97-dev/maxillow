@@ -1,27 +1,27 @@
-import React from "react"
-import Slider from "react-slick"
+import React from "react";
+import Slider from "react-slick";
 
-import { RightArrow } from "../../../components/icons"
-import RRenderer from "../../../components/richtextRenderer"
-import "./slider.scss"
+import { RightArrow } from "../../../components/icons";
+import RRenderer from "../../../components/richtextRenderer";
+import "./slider.scss";
 
 const Slide = ({ author, content }) => {
   return (
-    <div className="mb-10 lg:mb-6 home-slider-slide">
+    <div className="mb-[50px] lg:mb-6 home-slider-slide">
       <div className="flex flex-col h-full justify-center">
         <RRenderer
           data={content}
           config={{
-            p: "text-sm mb-4",
+            p: "text-sm mb-4 lg:text-xl",
           }}
         />
-        <div className="mt-2">
+        <div className="mt-[50px]">
           <h4 className="uppercase font-bold">{author}</h4>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const ArrowRight = ({ onClick }) => {
   return (
@@ -35,8 +35,8 @@ const ArrowRight = ({ onClick }) => {
         </div>
       </button>
     </div>
-  )
-}
+  );
+};
 
 const ArrowLeft = ({ onClick }) => {
   return (
@@ -50,12 +50,12 @@ const ArrowLeft = ({ onClick }) => {
         </div>
       </button>
     </div>
-  )
-}
+  );
+};
 
 const Pagination = ({ props }) => {
-  return <button className="button-pagination" {...props}></button>
-}
+  return <button className="button-pagination" {...props}></button>;
+};
 
 const SliderWrapper = ({ slides }) => {
   const settings = {
@@ -65,7 +65,7 @@ const SliderWrapper = ({ slides }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     dotsClass: "home-slider-dots",
-  }
+  };
 
   return (
     <>
@@ -78,11 +78,11 @@ const SliderWrapper = ({ slides }) => {
         {slides.map((v, i) => {
           return (
             <Slide key={i} author={v.node.author} content={v.node.content} />
-          )
+          );
         })}
       </Slider>
     </>
-  )
-}
+  );
+};
 
-export default SliderWrapper
+export default SliderWrapper;

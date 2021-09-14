@@ -1,9 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
 // Assets and styles
-import FooterLogo from "./../../images/FooterLogo.png"
-import "./index.scss"
+import FooterLogo from "./../../images/FooterLogo.png";
 
 function Footer() {
   const navigations = [
@@ -23,16 +22,12 @@ function Footer() {
       title: "CONTACT US",
       path: "/contact-us",
     },
-  ]
+  ];
   return (
-    <div className="bg-gray-800 py-16 flex flex-col items-center px-12 md:px-0">
-      <img
-        src={FooterLogo}
-        alt=""
-        className="w-full md:w-54 md:w-64 mx-auto mb-6 md:mb-0"
-      />
-      <nav className="block flex flex-col md:flex-row items-center w-full md:w-auto pt-6 mx-auto p-4">
-        {navigations.map(item => (
+    <div className="flex flex-col items-center py-[100px] px-[30px] bg-gray-800 md:px-0">
+      <img src={FooterLogo} alt="" className="w-full md:w-54 md:w-64 mx-auto" />
+      <nav className="block flex flex-col md:flex-row gap-8 items-center w-full md:w-auto md:gap-16 mt-[50px] mx-auto">
+        {navigations.map((item) => (
           <Link
             className="footer-nav-link block md:inline-block no-underline text-primary"
             key={item.title}
@@ -47,7 +42,7 @@ function Footer() {
         ))}
       </nav>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

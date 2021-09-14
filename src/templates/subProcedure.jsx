@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 import { HeroSection } from "../containers/aboutUs"
 import { ProcedureContextSec } from "./../containers/procedures"
 import SectionFooter from "../components/sectionFooter"
-import OtherOptions from "../containers/procedures/OtherOptions"
+import OtherOptions from "../containers/procedures/otherOptions"
 import ProcedureContainer from "../containers/procedures/procedureContainer"
 
 const SubProcedure = ({ data }) => {

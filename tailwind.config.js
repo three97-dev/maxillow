@@ -1,5 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.jsx"],
+  mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -46,4 +47,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-}
+};

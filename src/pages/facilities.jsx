@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SectionFooter from "./../components/sectionFooter"
 import { HeroSection } from "../containers/aboutUs"
-import Section from "../containers/facilities/Section"
+import Section from "../containers/facilities/section"
 import FacilitiesContainer from "../containers/facilities"
 
 const Facilities = ({ data }) => {

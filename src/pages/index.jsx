@@ -1,17 +1,17 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import SectionFooter from "./../components/sectionFooter"
-import { HeroSection, Service, Slider } from "../containers/homePage"
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import SectionFooter from "./../components/sectionFooter";
+import { HeroSection, Service, Slider } from "../containers/homePage";
 //
-import homeBgPattern from "../images/homeBgPattern.svg"
-import Testimonials from "./../images/testimonails.png"
+import homeBgPattern from "../images/homeBgPattern.svg";
+import Testimonials from "./../images/testimonails.png";
 
 const IndexPage = ({ data }) => {
-  const heroData = data.allContentfulHeroHomepage
-  const sectionsData = data.allContentfulSectionsHomepage.edges
-  const testimonials = data.allContentfulTestimonials
-  const doctors = data.doctors.edges
+  const heroData = data.allContentfulHeroHomepage;
+  const sectionsData = data.allContentfulSectionsHomepage.edges;
+  const testimonials = data.allContentfulTestimonials;
+  const doctors = data.doctors.edges;
 
   return (
     <Layout>
@@ -24,42 +24,40 @@ const IndexPage = ({ data }) => {
         <HeroSection
           data={heroData}
           doctors={doctors.sort((a, b) => {
-            const firstOrder = a.node.displayOrder
-            const secondOrder = b.node.displayOrder
+            const firstOrder = a.node.displayOrder;
+            const secondOrder = b.node.displayOrder;
             if (firstOrder > secondOrder) {
-              return 1
+              return 1;
             } else if (firstOrder < secondOrder) {
-              return -1
+              return -1;
             } else {
-              return 0
+              return 0;
             }
           })}
-          sections={sectionsData.map(sec => sec.node.title)}
+          sections={sectionsData.map((sec) => sec.node.title)}
         />
         {sectionsData.map((v, i) => {
           return (
-            <>
-              <Service
-                key={i}
-                isCentered={v.node.isCentered}
-                reverse={v.node.reverse}
-                image={v.node.image}
-                isPadding={false}
-                title={v.node.title}
-                description={v.node.description}
-                first={i === 0}
-                footer={{
-                  title: v.node.footerTitle,
-                  subTitle: v.node.footerSubtitle,
-                  link: v.node.footerLink,
-                }}
-                footer2={i % 2 !== 0}
-                addBlob={i === 0}
-                orangeDots={i === 1}
-                blueDots={i === 2}
-              />
-            </>
-          )
+            <Service
+              key={i}
+              isCentered={v.node.isCentered}
+              reverse={v.node.reverse}
+              image={v.node.image}
+              isPadding={false}
+              title={v.node.title}
+              description={v.node.description}
+              first={i === 0}
+              footer={{
+                title: v.node.footerTitle,
+                subTitle: v.node.footerSubtitle,
+                link: v.node.footerLink,
+              }}
+              footer2={i % 2 !== 0}
+              addBlob={i === 0}
+              orangeDots={i === 1}
+              blueDots={i === 2}
+            />
+          );
         })}
 
         <Slider
@@ -73,8 +71,8 @@ const IndexPage = ({ data }) => {
         />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -142,4 +140,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage
+export default IndexPage;

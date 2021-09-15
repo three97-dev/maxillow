@@ -6,10 +6,10 @@ function SliderSection(props) {
 
   return (
     <div
-      className="home-slider-main-container px-[30px] pt-[50px] md:px-20 lg:px-[30px]"
+      className="2xl:px-0 home-slider-main-container px-[30px] pt-[50px] md:px-20 lg:px-[30px]"
       id="home-testimonials"
     >
-      <div>
+      <div className="2xl:max-w-[1236px] mx-auto">
         <h3 className="text-center pb-[50px] lg:hidden">
           Kind Words From Our Patients
         </h3>

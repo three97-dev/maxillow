@@ -1,19 +1,19 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import SectionFooter from "./../components/sectionFooter"
-import { HeroSection, AssociationSec } from "../containers/aboutUs"
-import Doctor from "../containers/aboutUs/doctor"
-import AboutUsIntroSection from "../containers/aboutUs/introSection"
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import SectionFooter from "./../components/sectionFooter";
+import { HeroSection, AssociationSec } from "../containers/aboutUs";
+import Doctor from "../containers/aboutUs/doctor";
+import AboutUsIntroSection from "../containers/aboutUs/introSection";
 
 //
-import homeBgPattern from "../images/homeBgPattern.svg"
+import homeBgPattern from "../images/homeBgPattern.svg";
 
 const AboutUs = ({ data }) => {
-  const aboutHeroData = data.allContentfulHeroAboutUs
-  const associationsData = data.allContentfulAssociations
-  const serviceData = data.allContentfulServiceAboutUs.edges
-  const introData = data.contentfulAboutUsIntro
+  const aboutHeroData = data.allContentfulHeroAboutUs;
+  const associationsData = data.allContentfulAssociations;
+  const serviceData = data.allContentfulServiceAboutUs.edges;
+  const introData = data.contentfulAboutUsIntro;
 
   return (
     <Layout>
@@ -45,27 +45,26 @@ const AboutUs = ({ data }) => {
 
         {serviceData
           .sort((a, b) => {
-            const firstOrder = a.node.displayOrder
-            const secondOrder = b.node.displayOrder
+            const firstOrder = a.node.displayOrder;
+            const secondOrder = b.node.displayOrder;
             if (firstOrder > secondOrder) {
-              return 1
+              return 1;
             } else if (firstOrder < secondOrder) {
-              return -1
+              return -1;
             } else {
-              return 0
+              return 0;
             }
           })
           .map((v, i) => {
-            const inverse = i % 2 === 0
             return (
               <Doctor
                 src={v.node.image.file.url}
                 title={v.node.title}
                 description={v.node.description}
                 quote={v.node.quote}
-                inverse={inverse}
+                doctor={i + 1}
               />
-            )
+            );
           })}
 
         <AssociationSec data={associationsData} />
@@ -79,8 +78,8 @@ const AboutUs = ({ data }) => {
         />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -146,6 +145,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default AboutUs
+export default AboutUs;

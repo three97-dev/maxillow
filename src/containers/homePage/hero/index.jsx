@@ -1,16 +1,16 @@
-import React, { useRef } from "react"
-import ScrollSpy from "react-scrollspy"
-import { getSrcSet, useWindowSize } from "../../../hooks/getWidth"
+import React, { useRef } from "react";
+import ScrollSpy from "react-scrollspy";
+import { getSrcSet, useWindowSize } from "../../../hooks/getWidth";
 
-import "./index.scss"
-import PatternBlue from "../../../images/pattern-blue.svg"
+import "./index.scss";
+import PatternBlue from "../../../images/pattern-blue.svg";
 
 function HeroSection({ doctors, sections, ...props }) {
   const { welcomeTitle, mainHeading, shortDescription, heroImage } =
-    props.data.edges[0].node
+    props.data.edges[0].node;
 
-  const imgRef = useRef(null)
-  const imgSize = useWindowSize(imgRef)
+  const imgRef = useRef(null);
+  const imgSize = useWindowSize(imgRef);
 
   return (
     <div className="relative global-x-spacing remove-mobile" id="home-hero">
@@ -33,21 +33,24 @@ function HeroSection({ doctors, sections, ...props }) {
             />
           </div>
           <div className="home-header-bar hidden lg:block">
-            <div className="main-bar mx-8 rounded-lg px-2 py-8">
+            <div className="2xl:max-w-[1850px] 2xl:mx-auto main-bar mx-8 rounded-lg px-2 py-8">
               <div className="max-w-6xl mx-auto flex items-center">
                 {doctors.map(({ node: { title } }, i) => {
-                  const isLastDoctor = i + 1 === doctors.length
+                  const isLastDoctor = i + 1 === doctors.length;
                   return (
                     <div
                       className={`flex-1 text-center hidden lg:block ${
                         !isLastDoctor ? "border-r border-secondary" : ""
                       }`}
                     >
-                      <h2 className="flex-1 uppercase" style={{color: '#2D2D2D'}}>
+                      <h2
+                        className="flex-1 uppercase"
+                        style={{ color: "#2D2D2D" }}
+                      >
                         {title}
                       </h2>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -63,7 +66,7 @@ function HeroSection({ doctors, sections, ...props }) {
         <ScrollSpy
           items={[
             "home-hero",
-            ...sections.map(sec => sec.toLowerCase().split(" ").join("-")),
+            ...sections.map((sec) => sec.toLowerCase().split(" ").join("-")),
             "home-testimonials",
           ]}
           currentClassName="active"
@@ -72,7 +75,7 @@ function HeroSection({ doctors, sections, ...props }) {
           <li className="active">
             <a href={`#home-hero`}>a</a>
           </li>
-          {sections.map(sec => (
+          {sections.map((sec) => (
             <li>
               <a href={`#${sec.toLowerCase().split(" ").join("-")}`}>a</a>
             </li>
@@ -95,7 +98,7 @@ function HeroSection({ doctors, sections, ...props }) {
         </a>
       </div>
     </div>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

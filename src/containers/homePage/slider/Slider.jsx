@@ -25,31 +25,27 @@ const Slide = ({ author, content }) => {
 
 const ArrowRight = ({ onClick }) => {
   return (
-    <div className="home-slider-right-arrow">
-      <button onClick={onClick}>
-        <div className="block lg:hidden">
-          <RightArrow size={36} color="#2FC0CC" />
-        </div>
-        <div className="hidden lg:block">
-          <RightArrow size={50} color="#2FC0CC" />
-        </div>
-      </button>
-    </div>
+    <button className="home-slider-right-arrow" onClick={onClick}>
+      <div className="block lg:hidden">
+        <RightArrow size={36} color="#2FC0CC" />
+      </div>
+      <div className="hidden lg:block">
+        <RightArrow size={50} color="#2FC0CC" />
+      </div>
+    </button>
   );
 };
 
 const ArrowLeft = ({ onClick }) => {
   return (
-    <div className="home-slider-left-arrow">
-      <button onClick={onClick}>
-        <div className="block lg:hidden">
-          <RightArrow size={36} color="#2FC0CC" />
-        </div>
-        <div className="hidden lg:block">
-          <RightArrow size={50} color="#2FC0CC" />
-        </div>
-      </button>
-    </div>
+    <button onClick={onClick} className="home-slider-left-arrow">
+      <div className="block lg:hidden">
+        <RightArrow size={36} color="#2FC0CC" />
+      </div>
+      <div className="hidden lg:block">
+        <RightArrow size={50} color="#2FC0CC" />
+      </div>
+    </button>
   );
 };
 

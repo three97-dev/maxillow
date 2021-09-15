@@ -1,51 +1,38 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
 // Components
-import RRenderer from "../../../components/richtextRenderer"
+import RRenderer from "../../../components/richtextRenderer";
 
 // Assets and Styles
-import "./index.scss"
-import QuoteIcon from "../../../images/quote-icon.svg"
-import arrowImage from "../../../images/ArrowRedRight.png"
+import arrowImage from "../../../images/ArrowRedRight.png";
 
 const AboutUsIntroSection = ({ data, ...props }) => {
-  const { title, image, quote, description } = data
+  const { title, image, quote, description } = data;
 
   return (
-    <div className="py-6 md:py-12 lg:pt-16 lg:pb-24 global-x-spacing" id="main-content">
-      <div className="px-6 xl:px-0 ">
-        <div className="flex flex-col lg:flex-row w-full md:w-1/2 lg:w-full mx-auto">
-          <div className="w-full lg:w-4/12 pr-0 lg:pr-10 xl:pr-16">
-            <h3 className="text-center lg:text-left mb-4">{title}</h3>
+    <div
+      className="2xl:max-w-[1236px] mx-auto pt-[50px] px-[30px] md:pt-[75px] md:px-20 lg:pt-[50px] lg:px-[10.5%] 2xl:px-0"
+      id="main-content"
+    >
+      <div>
+        <div className="flex flex-col lg:flex-row w-full lg:w-full mx-auto mb-[34px] lg:gap-[50px] lg:mb-0">
+          <div className="lg:flex relative lg:flex-col lg:justify-between lg:max-w-[300px] xl:max-w-[400px]">
+            <div className="hidden lg:block absolute w-[1px] h-[55%] bg-[#7AD0DD] top-5 right-3" />
+            <h3 className="text-center lg:text-left mb-[50px]">{title}</h3>
+            <div className="hidden md:block w-full pl-16 pr-6 pt-6 mb-[100px] lg:w-auto lg:m-0 lg:p-0">
+              <img src={image.file.url} alt="teeth" />
+            </div>
           </div>
-          <div className="pl-0 lg:pl-10 xl:pl-16 w-full lg:w-8/12 lg:border-l border-secondary">
+          <div className="w-full">
             <RRenderer
               data={description}
               config={{
                 p: "mb-4 text-text",
               }}
             />
-          </div>
-        </div>
-        <div className="flex flex-col items-end lg:items-center lg:flex-row xl:mt-12">
-          <div className="hidden md:block w-1/2 lg:w-4/12">
-            <img className="skeleton-teeth-image" src={image.file.url} alt="" />
-          </div>
-          <div className="lg:pl-16 w-full lg:w-8/12  ">
-            <div className="hidden xl:flex items-start">
-              <div>
-                <img src={QuoteIcon} className="h-12 w-12"  alt="" />
-              </div>
-              <h4 className="flex-1 px-12 text-center text-secondary">
-                {quote.quote}
-              </h4>
-              <div className="self-end">
-                <img src={QuoteIcon} className="right-quote h-12 w-12" alt="" />
-              </div>
-            </div>
             <div
-              className={`home-section-footer flex items-center mt-0 md:mt-8 lg:mt-0 xl:mt-16`}
+              className={`hidden lg:flex home-section-footer px-5 pt-[38px] pb-11 items-center mt-0 md:mt-0 lg:mt-[50px]`}
             >
               <div className="flex-1">
                 <h2>{props.footer.subTitle}</h2>
@@ -53,7 +40,24 @@ const AboutUsIntroSection = ({ data, ...props }) => {
               </div>
               <div>
                 <Link to={props.footer.link}>
-                  <img src={arrowImage} className="h-12 w-12" alt="" />
+                  <img src={arrowImage} alt="" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-end lg:hidden">
+          <div className="lg:pl-16 w-full lg:w-8/12">
+            <div
+              className={`home-section-footer px-5 pt-[38px] pb-11 flex items-center mt-0 md:mt-0 xl:mt-16`}
+            >
+              <div className="flex-1">
+                <h2>{props.footer.subTitle}</h2>
+                <h3>{props.footer.title}</h3>
+              </div>
+              <div>
+                <Link to={props.footer.link}>
+                  <img src={arrowImage} alt="" />
                 </Link>
               </div>
             </div>
@@ -61,7 +65,7 @@ const AboutUsIntroSection = ({ data, ...props }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutUsIntroSection
+export default AboutUsIntroSection;

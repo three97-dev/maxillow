@@ -19,7 +19,7 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
 
   return (
     <div
-      className="home-service-main-container px-[30px] py-[50px] md:px-20 lg:px-[10.5%] xl:py-20"
+      className="2xl:max-w-[1236px] mx-auto 2xl:px-0 home-service-main-container px-[30px] py-[50px] md:px-20 lg:px-[10.5%] xl:py-20"
       id={props.title.toLowerCase().split(" ").join("-")}
     >
       <div
@@ -94,7 +94,7 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
             }`}
           >
             <div
-              className={` home-section-footer ${
+              className={` home-section-footer  px-5 pt-[38px] pb-11 ${
                 footer2 ? "footer-2" : ""
               } flex items-center`}
             >
@@ -144,7 +144,7 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
 
             {!props.isCentered && (
               <div
-                className={`home-section-footer ${
+                className={`home-section-footer  px-5 pt-[38px] pb-11 ${
                   footer2 ? "footer-2" : ""
                 }  items-center mt-16 hidden lg:flex`}
               >

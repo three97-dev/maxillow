@@ -7,17 +7,17 @@ import "./slider.scss";
 
 const Slide = ({ author, content }) => {
   return (
-    <div className="mb-[50px] lg:mb-6 home-slider-slide">
-      <div className="flex flex-col h-full justify-center">
-        <RRenderer
-          data={content}
-          config={{
-            p: "text-sm mb-4 lg:text-xl",
-          }}
-        />
-        <div className="mt-[50px]">
-          <h4 className="uppercase font-bold">{author}</h4>
+    <div className="home-slider-container mb-[50px] px-[30px] md:px-20 lg:px-0 lg:max-w-[650px] xl:max-w-[800px] 2xl:max-w-[85%] lg:mx-auto">
+      <div className="flex flex-col h-full home-slide-shadow rounded-[10px] bg-white p-[25px] pb-[30px] md:p-[50px] 2xl:px-[90px] 2xl:py-[50px]">
+        <div className="overflow-y-auto">
+          <RRenderer
+            data={content}
+            config={{
+              p: "text-sm mb-4 lg:text-xl",
+            }}
+          />
         </div>
+        <h4 className="uppercase font-bold mt-7 xl:mt-10">{author}</h4>
       </div>
     </div>
   );
@@ -25,11 +25,11 @@ const Slide = ({ author, content }) => {
 
 const ArrowRight = ({ onClick }) => {
   return (
-    <button className="home-slider-right-arrow" onClick={onClick}>
-      <div className="block lg:hidden">
-        <RightArrow size={36} color="#2FC0CC" />
-      </div>
-      <div className="hidden lg:block">
+    <button
+      className="home-slider-right-arrow mr-[30px] md:mr-20 lg:m-0"
+      onClick={onClick}
+    >
+      <div>
         <RightArrow size={50} color="#2FC0CC" />
       </div>
     </button>
@@ -38,11 +38,11 @@ const ArrowRight = ({ onClick }) => {
 
 const ArrowLeft = ({ onClick }) => {
   return (
-    <button onClick={onClick} className="home-slider-left-arrow">
-      <div className="block lg:hidden">
-        <RightArrow size={36} color="#2FC0CC" />
-      </div>
-      <div className="hidden lg:block">
+    <button
+      onClick={onClick}
+      className="home-slider-left-arrow ml-[30px] md:ml-20 lg:m-0"
+    >
+      <div>
         <RightArrow size={50} color="#2FC0CC" />
       </div>
     </button>

@@ -11,10 +11,12 @@ function SectionFooter({ footerBg, data = {} }) {
     <div className={`2xl:px-0 ${footerBg} px-[30px] md:px-20 lg:px-[10.5%]`}>
       <div className="2xl:max-w-[1236px] mx-auto flex justify-between items-center  py-10 z-20">
         <div>
-          <h2 className="uppercase text-white">{subTitle || "view our"}</h2>
-          <h3 className="text-center text-white uppercase">
+          <p className="uppercase text-white lg:text-sm">
+            {subTitle || "view our"}
+          </p>
+          <h2 className="text-center text-white uppercase">
             {title || "PROCEDURES"}
-          </h3>
+          </h2>
         </div>
         <Link to={link} target={target}>
           <button>

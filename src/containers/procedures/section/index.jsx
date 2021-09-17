@@ -1,12 +1,12 @@
-import React, { useRef } from "react"
-import RRenderer from "../../../components/richtextRenderer"
-import { getSrcSet, useWindowSize } from "../../../hooks/getWidth"
+import React, { useRef } from "react";
+import RRenderer from "../../../components/richtextRenderer";
+import { getSrcSet, useWindowSize } from "../../../hooks/getWidth";
 
-import "./index.scss"
+import "./index.scss";
 
-const Service = props => {
-  const imgRef = useRef(null)
-  const imgSize = useWindowSize(imgRef)
+const Service = (props) => {
+  const imgRef = useRef(null);
+  const imgSize = useWindowSize(imgRef);
   return (
     <div className="relative pt-16 lg:pt-20 lg:pt-14 global-x-spacing">
       <div className="md:w-1/2 lg:w-full mx-auto">
@@ -30,7 +30,9 @@ const Service = props => {
               }`}
             >
               <div className="md:w-1/2 lg:w-full mx-auto">
-                <h2 className="text-text">{props.footerText}</h2>
+                <p className="lg:text-sm lg:max-w-[500px] xl:max-w-[600px]">
+                  {props.footerText}
+                </p>
               </div>
             </div>
           </div>
@@ -46,7 +48,7 @@ const Service = props => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Service
+export default Service;

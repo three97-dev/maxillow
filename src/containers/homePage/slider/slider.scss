@@ -30,30 +30,30 @@
 
 .home-slider-container {
   // h-[582px] 2xl:h-[500px]
-  height: 582px;
+  height: 642px;
 
   @media (min-width: 450px) {
-    height: 482px;
+    height: 540px;
   }
 
   @media (min-width: 550px) {
-    height: 400px;
+    height: 430px;
   }
 
   @media (min-width: 650px) {
-    height: 350px;
+    height: 380px;
   }
 
   @media (min-width: 830px) {
-    height: 400px;
+    height: 420px;
   }
 
   @media (min-width: 1024px) {
-    height: 582px;
+    height: 600px;
   }
 
   @media (min-width: 1280px) {
-    height: 510px;
+    height: 480px;
   }
 
   @media (min-width: 1536px) {

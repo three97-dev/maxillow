@@ -10,8 +10,10 @@ function Service(props) {
     <div className="2xl:max-w-[1236px] mx-auto 2xl:px-0 px-[30px] mt-[75px] md:mt-[100px] lg:mt-[50px] lg:px-[10.5%]">
       <div className="flex flex-col max-w-3xl m-auto items-center">
         <div className="w-sm flex-1">
-          <h3 className="text-center">{data.title}</h3>
-          <h2 className="mt-9 text-center max-w-[330px]">{data.description}</h2>
+          <h2 className="text-center">{data.title}</h2>
+          <p className="mt-9 text-center max-w-[400px] lg:text-base">
+            {data.description}
+          </p>
         </div>
       </div>
       <div className="border-t border-secondary max-w-lg mx-auto w-40 lg:w-60 my-[50px]" />

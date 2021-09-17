@@ -45,15 +45,17 @@ function HeroSection({
                   {props.miniHeading}
                 </h2>
               )}
-              <h1 className="uppercase mb-3 text-white">{mainHeading}</h1>
+              <h1 className="uppercase mb-3 text-white lg:font-extrabold">
+                {mainHeading}
+              </h1>
               <p className="text-white mb-[50px] md:mb-[100px] lg:mb-11">
                 {shortDescription}
               </p>
               <div className="text-center hidden lg:block">
                 <a href="#main-content">
-                  <h2 className="flex-1 text-white uppercase mb-2 lg:mb-3">
+                  <h6 className="flex-1 text-white uppercase mb-2 lg:mb-3">
                     {ctaText}
-                  </h2>
+                  </h6>
                   <button>
                     <img src={ArrowDownWhite} alt="" />
                   </button>
@@ -63,7 +65,7 @@ function HeroSection({
           </div>
           <div className="text-center block lg:hidden pb-6">
             <a href="#main-content">
-              <h2 className="flex-1 text-white uppercase mb-3">{ctaText}</h2>
+              <h6 className="flex-1 text-white uppercase mb-3">{ctaText}</h6>
               <button>
                 <img src={ArrowDownWhite} alt="" />
               </button>

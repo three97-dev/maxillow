@@ -10,9 +10,9 @@ function SliderSection(props) {
       id="home-testimonials"
     >
       <div className="relative 2xl:max-w-[1236px] mx-auto">
-        <h3 className="text-center pb-[50px] px-[30px] md:px-20 lg:px-[30px]">
+        <h2 className="text-center pb-[50px] px-[30px] md:px-20 lg:px-[30px]">
           Kind Words From Our Patients
-        </h3>
+        </h2>
         <div className="pb-[55px] lg:pb-[55px]">
           <div className="relative">
             <Slider slides={slides} />

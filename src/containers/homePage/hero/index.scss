@@ -25,6 +25,13 @@
 
   @media (min-width: 1024px) {
     transform: translateX(170px);
+  }
+
+  @media (min-width: 1280px) {
+    padding: 20px 30px;
+  }
+
+  @media (min-width: 1536px) {
     padding: 50px 65px;
   }
 

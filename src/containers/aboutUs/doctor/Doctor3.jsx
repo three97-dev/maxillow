@@ -20,7 +20,7 @@ function Doctor1({ title, description, src, quote, doctor }) {
           </div>
           <div className="lg:max-w-[450px] xl:max-w-[600px] lg:pb-[100px] xl:pb-[153px]">
             <div className="mx-auto w-full">
-              <h3 className="mb-[50px] text-center lg:mb-4 xl:mb-9">{title}</h3>
+              <h2 className="mb-[50px] text-center lg:mb-4 xl:mb-9">{title}</h2>
               <div>
                 <RRenderer
                   data={description}
@@ -35,7 +35,7 @@ function Doctor1({ title, description, src, quote, doctor }) {
       </div>
       <div className="hobby-bar px-[30px] py-5 md:py-10 md:px-20 2xl:px-0 lg:py-5 lg:absolute lg:bottom-0 text-left flex items-center z-10 lg:pl-[10.5%]">
         <div className="2xl:w-[1236px] 2xl:mx-auto">
-          <h2 className="lg:max-w-[500px] xl:max-w-[600px]">{quote}</h2>
+          <p className="text-sm lg:max-w-[500px] xl:max-w-[600px]">{quote}</p>
         </div>
       </div>
     </div>

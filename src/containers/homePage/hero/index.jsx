@@ -18,9 +18,9 @@ function HeroSection({ doctors, sections, ...props }) {
         <div className="w-full flex flex-col-reverse lg:flex-row relative items-center justify-center">
           <div className="text-center flex justify-center lg:justify-end w-full md:w-2/3 lg:w-5/12">
             <div className="home-header-intro">
-              <h2 className="uppercase">{welcomeTitle}</h2>
+              <h6 className="uppercase">{welcomeTitle}</h6>
               <h1 className="uppercase py-3">{mainHeading}</h1>
-              <p>{shortDescription}</p>
+              <p className="lg:text-base">{shortDescription}</p>
             </div>
           </div>
           <div className="flex items-start w-full lg:w-7/12 xl:mr-8">
@@ -43,12 +43,12 @@ function HeroSection({ doctors, sections, ...props }) {
                         !isLastDoctor ? "border-r border-secondary" : ""
                       }`}
                     >
-                      <h2
+                      <h6
                         className="flex-1 uppercase"
                         style={{ color: "#2D2D2D" }}
                       >
                         {title}
-                      </h2>
+                      </h6>
                     </div>
                   );
                 })}

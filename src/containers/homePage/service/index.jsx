@@ -99,8 +99,8 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
               } flex items-center`}
             >
               <div className="flex-1">
-                <h2 className="uppercase">{props.footer.subTitle}</h2>
-                <h3 className="uppercase">{props.footer.title}</h3>
+                <h6 className="uppercase">{props.footer.subTitle}</h6>
+                <h2 className="uppercase">{props.footer.title}</h2>
               </div>
               <div>
                 <Link to={props.footer.link}>
@@ -114,13 +114,13 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
           </div>
         </div>
         <div className="flex-1 z-10">
-          <h3
+          <h2
             className={`text-center pb-[34px] ${
               props.isCentered ? " lg:pb-6" : "lg:text-left"
             }`}
           >
             {props?.title}
-          </h3>
+          </h2>
           {props.subTitle && (
             <p
               className={`text-sm md:text-xl py-1 ${
@@ -149,7 +149,7 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
                 }  items-center mt-16 hidden lg:flex`}
               >
                 <div className="flex-1">
-                  <h2 className="uppercase">{props.footer.subTitle}</h2>
+                  <h6 className="uppercase">{props.footer.subTitle}</h6>
                   <h3 className="uppercase">{props.footer.title}</h3>
                 </div>
                 <div className="h-12 w-12">

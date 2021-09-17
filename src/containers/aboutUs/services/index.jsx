@@ -10,9 +10,7 @@ function Service(props) {
     <div className="container mx-auto max-w-7xl p-4 py-24">
       <div
         className={`flex gap-6 ${
-          props.reverse
-            ? "md:flex-row-reverse justify-between"
-            : "md:flex-row"
+          props.reverse ? "md:flex-row-reverse justify-between" : "md:flex-row"
         } flex-col items-center`}
       >
         <div className="text-3xl flex-1 align-end">
@@ -27,18 +25,16 @@ function Service(props) {
           />
         </div>
         <div className="text-2xl flex-1 abosulte">
-          <h2 className="text-center text-3xl py-3 font-bold">
-            {props.title}
-          </h2>
+          <h2 className="text-center text-3xl py-3 font-bold">{props.title}</h2>
 
-          <p className="text-sm md:text-sm py-1">
+          <div className="text-sm md:text-sm py-1">
             <RRenderer
               data={props.description}
               config={{
                 p: "mt-4 text-text",
               }}
             />
-          </p>
+          </div>
 
           {props.quote && (
             <div

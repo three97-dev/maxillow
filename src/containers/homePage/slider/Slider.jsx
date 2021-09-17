@@ -7,13 +7,13 @@ import "./slider.scss";
 
 const Slide = ({ author, content }) => {
   return (
-    <div className="home-slider-container mb-[50px] px-[30px] md:px-20 lg:px-0 lg:max-w-[650px] xl:max-w-[800px] 2xl:max-w-[85%] lg:mx-auto">
+    <div className="home-slider-container mb-[50px] px-[30px] md:px-20 lg:px-0 lg:max-w-[650px] xl:max-w-[800px] 2xl:max-w-[80%] lg:mx-auto">
       <div className="flex flex-col h-full home-slide-shadow rounded-[10px] bg-white p-[25px] pb-[30px] md:p-[50px] 2xl:px-[90px] 2xl:py-[50px]">
-        <div className="overflow-y-auto">
+        <div className="overflow-y-auto flex-1">
           <RRenderer
             data={content}
             config={{
-              p: "text-sm mb-4 lg:text-xl",
+              p: "leading-[22px] md:text-base lg:text-xl",
             }}
           />
         </div>

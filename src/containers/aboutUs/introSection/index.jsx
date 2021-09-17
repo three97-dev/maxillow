@@ -19,7 +19,7 @@ const AboutUsIntroSection = ({ data, ...props }) => {
         <div className="flex flex-col lg:flex-row w-full lg:w-full mx-auto mb-[34px] lg:gap-[50px] lg:mb-0">
           <div className="lg:flex relative lg:flex-col lg:justify-between lg:max-w-[300px] xl:max-w-[400px]">
             <div className="hidden lg:block absolute w-[1px] h-[55%] bg-[#7AD0DD] top-5 right-3" />
-            <h3 className="text-center lg:text-left mb-[50px]">{title}</h3>
+            <h2 className="text-center lg:text-left mb-[50px]">{title}</h2>
             <div className="hidden md:block w-full pl-16 pr-6 pt-6 mb-[100px] lg:w-auto lg:m-0 lg:p-0">
               <img src={image.file.url} alt="teeth" />
             </div>
@@ -28,15 +28,15 @@ const AboutUsIntroSection = ({ data, ...props }) => {
             <RRenderer
               data={description}
               config={{
-                p: "mb-4 text-text",
+                p: "mb-4 md:text-xl lg:text-lg xl:text-xl",
               }}
             />
             <div
-              className={`hidden lg:flex home-section-footer px-5 pt-[38px] pb-11 items-center mt-0 md:mt-0 lg:mt-[50px]`}
+              className={`hidden lg:flex home-section-footer px-5 pt-[38px] pb-11 items-center mt-0 md:mt-0 lg:mt-[50px] lg:px-[50px]`}
             >
               <div className="flex-1">
-                <h2>{props.footer.subTitle}</h2>
-                <h3>{props.footer.title}</h3>
+                <h6 className="uppercase">{props.footer.subTitle}</h6>
+                <h2>{props.footer.title}</h2>
               </div>
               <div>
                 <Link to={props.footer.link}>
@@ -52,8 +52,8 @@ const AboutUsIntroSection = ({ data, ...props }) => {
               className={`home-section-footer px-5 pt-[38px] pb-11 flex items-center mt-0 md:mt-0 xl:mt-16`}
             >
               <div className="flex-1">
-                <h2>{props.footer.subTitle}</h2>
-                <h3>{props.footer.title}</h3>
+                <h6>{props.footer.subTitle}</h6>
+                <h2>{props.footer.title}</h2>
               </div>
               <div>
                 <Link to={props.footer.link}>

@@ -1,18 +1,21 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import SectionFooter from "./../components/sectionFooter"
-import { HeroSection } from "../containers/aboutUs"
-import Section from "../containers/facilities/section"
-import FacilitiesContainer from "../containers/facilities"
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import SectionFooter from "./../components/sectionFooter";
+import { HeroSection } from "../containers/aboutUs";
+import Section from "../containers/facilities/section";
+import FacilitiesContainer from "../containers/facilities";
 
 const Facilities = ({ data }) => {
-  const facilitiesHeroData = data.allContentfulHeroFacilities
-  const sectionsData = data.allContentfulSectionsFacilities.edges
+  const facilitiesHeroData = data.allContentfulHeroFacilities;
+  const sectionsData = data.allContentfulSectionsFacilities.edges;
 
   return (
     <Layout>
-      <HeroSection backgroundColor="grey" data={facilitiesHeroData} />
+      <HeroSection
+        backgroundClass="bg-facilities-container"
+        data={facilitiesHeroData}
+      />
       <FacilitiesContainer>
         {sectionsData.map((v, i) => (
           <Section
@@ -34,8 +37,8 @@ const Facilities = ({ data }) => {
         footerBg="bg-secondary"
       />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -71,5 +74,5 @@ export const query = graphql`
       }
     }
   }
-`
-export default Facilities
+`;
+export default Facilities;

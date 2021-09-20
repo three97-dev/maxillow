@@ -11,10 +11,6 @@
 .bg-about-container {
   background-image: linear-gradient(180deg, #eb6024 90%, white 90%);
 
-  @media (min-width: 830px) {
-    background-image: linear-gradient(180deg, #eb6024 86%, white 86%);
-  }
-
   @media (min-width: 1024px) {
     background-image: url("../../../images/pattern5.png"),
       linear-gradient(180deg, #eb6024 78%, white 78%);
@@ -22,19 +18,38 @@
   }
 }
 
-.bg-about {
-  bottom: 10px;
-  @media (min-width: 500px) {
-    bottom: -20px;
-  }
+.bg-procedures-container {
+  background-image: linear-gradient(180deg, #5765ce 90%, white 90%);
 
-  @media (min-width: 700px) {
-    bottom: -35px;
+  @media (min-width: 500px) {
+    background-image: linear-gradient(180deg, #5765ce 88%, white 88%);
   }
 
   @media (min-width: 1024px) {
+    background-image: url("../../../images/pattern5.png"),
+      linear-gradient(180deg, #5765ce 78%, white 78%);
+    background-position: left center;
+  }
+}
+
+.bg-facilities-container {
+  background-image: linear-gradient(180deg, #64555a 90%, white 90%);
+
+  @media (min-width: 500px) {
+    background-image: linear-gradient(180deg, #64555a 88%, white 88%);
+  }
+
+  @media (min-width: 1024px) {
+    background-image: url("../../../images/pattern5.png"),
+      linear-gradient(180deg, #64555a 78%, white 78%);
+    background-position: left center;
+  }
+}
+
+.bg-about {
+  bottom: 0;
+
+  @media (min-width: 1024px) {
     display: none;
-    width: 125%;
-    object-position: -20px -20px;
   }
 }

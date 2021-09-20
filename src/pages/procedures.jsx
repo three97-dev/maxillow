@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import SectionFooter from './../components/sectionFooter';
-import { HeroSection } from '../containers/aboutUs';
-import { ProcedureSec, Section } from './../containers/procedures';
-import ProcedureContainer from '../containers/procedures/procedureContainer';
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import SectionFooter from "./../components/sectionFooter";
+import { HeroSection } from "../containers/aboutUs";
+import { ProcedureSec, Section } from "./../containers/procedures";
+import ProcedureContainer from "../containers/procedures/procedureContainer";
 
 const Procedures = ({ data }) => {
   const heroData = data.allContentfulHeroProcedures;
@@ -13,13 +13,30 @@ const Procedures = ({ data }) => {
 
   return (
     <Layout>
-      <HeroSection data={heroData} backgroundColor='bgSecondary' marBot />
+      <HeroSection
+        data={heroData}
+        backgroundClass="bg-procedures-container"
+        marBot
+      />
       <ProcedureContainer>
         <ProcedureSec data={procedures} />
-        {sectionData.map((v, i) => {
-          return (
-            <div key={i}>
+        <h2 className="mt-[50px] text-center">
+          {sectionData[0].node.mainHeading}
+        </h2>
+
+        <p className="mt-[50px] lg:text-center mx-auto lg:max-w-4xl 2xl:max-w-7xl 3xl:max-w-[1364px]">
+          The consultation is an opportunity to meet each other and discuss your
+          surgery. We will review x-rays, medical history and other information
+          relevant to your treatment. We always discuss your anesthetic options
+          (local anesthesia, oral sedation, intravenous sedation or general
+          anesthesia) along with risks/benefits and associated costs.
+        </p>
+
+        <div className="my-[100px] flex flex-col gap-[50px] lg:flex-row lg:gap-4">
+          {sectionData.map((v, i) => {
+            return (
               <Section
+                key={i}
                 src={v.node.image.file.url}
                 title={v.node.title}
                 mainHeading={v.node.mainHeading}
@@ -27,14 +44,14 @@ const Procedures = ({ data }) => {
                 footerText={v.node.footerText}
                 inverse={i % 2 !== 0}
               />
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </ProcedureContainer>
 
       <SectionFooter
-        data={{ subTitle: 'Get In', title: 'Contact', link: '/contact-us' }}
-        footerBg='bg-secondary'
+        data={{ subTitle: "Get In", title: "Contact", link: "/contact-us" }}
+        footerBg="bg-secondary"
       />
     </Layout>
   );

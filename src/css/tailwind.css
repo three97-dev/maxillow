@@ -57,7 +57,7 @@ p {
   }
 }
 
-@media (min-width: 890px) {
+@media (min-width: 830px) {
   .global-x-spacing {
     padding-left: 80px;
     padding-right: 80px;

@@ -1,19 +1,19 @@
-.procedure-intro-container {
-  background-position-x: right;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(../../../images/proceduresBgImage.png);
+// .procedure-intro-container {
+//   background-position-x: right;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-image: url(../../../images/proceduresBgImage.png);
 
-  @media (max-width: 1023px) {
-    background-image: unset;
-  }
-}
+//   @media (max-width: 1024px) {
+//     background-image: unset;
+//   }
+// }
 
 .procedures-container {
   position: relative;
   @media (min-width: 1024px) {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 100%;
       width: 100%;
@@ -26,4 +26,8 @@
       border-radius: 10px;
     }
   }
+}
+
+.procedures-link-shadow {
+  box-shadow: rgba($color: #000000, $alpha: 0.16) 5px 5px 10px;
 }

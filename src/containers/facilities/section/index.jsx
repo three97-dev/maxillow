@@ -1,8 +1,12 @@
 import React from "react"
 import RRenderer from "../../../components/richtextRenderer"
 
+<<<<<<< Updated upstream
 //
 import "./index.scss"
+=======
+import "./index.scss";
+>>>>>>> Stashed changes
 
 const Section = ({ title, subTitle, image, description, reverse }) => {
   return (

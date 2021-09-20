@@ -3,10 +3,15 @@ module.exports = {
   mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      sm: "640px",
+      md: "830px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1920px",
+    },
     extend: {
-      screens: {
-        md: "830px",
-      },
       colors: {
         primary: "#EB6024",
         lightGreenBlue: "#D9F4F6",

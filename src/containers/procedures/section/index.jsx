@@ -8,44 +8,31 @@ const Service = (props) => {
   const imgRef = useRef(null);
   const imgSize = useWindowSize(imgRef);
   return (
-    <div className="relative pt-16 lg:pt-20 lg:pt-14 global-x-spacing">
-      <div className="md:w-1/2 lg:w-full mx-auto">
-        <div className="flex lg:flex-row flex-col items-center lg:items-start">
-          <div className="lg:relative flex-2 mb-8 md:mb-12 lg:mb-0 lg:mr-12 z-10">
-            <h3 className="mb-3 text-center lg:text-left">
-              {props.mainHeading}
-            </h3>
-            <h4 className="mb-2 lg:mb-3">{props.title}</h4>
-            <div>
-              <RRenderer
-                data={props.description}
-                config={{
-                  p: "mt-2 text-text text-sm",
-                }}
-              />
-            </div>
-            <div
-              className={`procedure-section-bar global-x-spacing ${
-                props.inverse ? "bar-inverse" : ""
-              }`}
-            >
-              <div className="md:w-1/2 lg:w-full mx-auto">
-                <p className="lg:text-sm lg:max-w-[500px] xl:max-w-[600px]">
-                  {props.footerText}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:flex-1 lg:z-20">
-            <img
-              ref={imgRef}
-              srcSet={getSrcSet(props.src, imgSize.width)}
-              className="w-full"
-              alt=""
-            />
-          </div>
-        </div>
+    <div className="flex-1">
+      <div className="mx-[25px] lg:mx-0 lg:h-[500px] lg:overflow-y-auto xl:h-[380px] 2xl:h-[360px] 3xl:h-[290px]">
+        <h3 className="mb-[50px]">{props.title}</h3>
+        <RRenderer
+          data={props.description}
+          config={{
+            p: "mt-2",
+          }}
+        />
+      </div>
+      <div
+        className={`mt-[50px] p-[25px] procedure-section-bar md:px-20 lg:p-4 lg:h-[150px] xl:h-[120px] 3xl:h-[111px] ${
+          props.inverse ? "bar-inverse" : ""
+        }`}
+      >
+        <p className="text-sm lg:text-sm lg:max-w-[500px] xl:max-w-[600px]">
+          {props.footerText}
+        </p>
+      </div>
+      <div className="mt-[50px]">
+        <img
+          srcSet={getSrcSet(props.src, imgSize.width)}
+          className="w-full"
+          alt=""
+        />
       </div>
     </div>
   );

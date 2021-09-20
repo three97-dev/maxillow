@@ -1,37 +1,19 @@
-import React from 'react';
+import React from "react";
 
 // Assets and styles
-import './index.scss';
-import homeBgPattern from '../../../images/homeBgPattern.svg';
-import PatternBlue from '../../../images/pattern-blue.svg';
-import Pattern from '../../../images/pattern.svg';
-
+import "./index.scss";
+import proceduresBgImage from "../../../images/proceduresBgImage.png";
 const ProcedureContainer = ({ children, patternGroupTwo }) => {
   return (
     <div
-      style={{
-        backgroundImage: `url(${homeBgPattern})`,
-      }}
-      className='procedure-main-container relative overflow-hidden pb-20 md:pb-32 lg:pb-24 z-10'
-      id='main-content'
+      className="procedure-main-container relative px-[30px] md:px-20 lg:px-[10.5%] 3xl:max-w-[1536px] mx-auto 3xl:px-0"
+      id="main-content"
     >
-      {patternGroupTwo ? (
-        <>
-          <img src={Pattern} className='procedure-2-image' alt="" />
-        </>
-      ) : (
-        <>
-          <img src={Pattern} className='procedure-horizontal-image' alt="" />
-          <img src={Pattern} className='procedure-left-image' alt="" />
-          <img src={Pattern} className='procedure-left-image-2' alt="" />
-        </>
-      )}
+      <img
+        src={proceduresBgImage}
+        className="absolute hidden lg:inline-block top-[-35px] right-[-98px] z-20 xl:top-[-11px]"
+      />
       {children}
-      {patternGroupTwo ? (
-        <img src={Pattern} className='procedure-2-footer-image' alt="" />
-      ) : (
-        <img src={PatternBlue} className='procedure-footer-image' alt="" />
-      )}
     </div>
   );
 };

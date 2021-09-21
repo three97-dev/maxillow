@@ -1,24 +1,21 @@
-import React from "react"
+import React from "react";
 
 // Assets and Styles
-import "./index.scss"
-import homeBgPattern from "../../images/homeBgPattern.svg"
-import PatternBlue from "../../images/pattern-blue.svg"
+import "./index.scss";
+import homeBgPattern from "../../images/homeBgPattern.svg";
 
 const FacilitiesContainer = ({ children }) => {
   return (
     <div
-      className="relative pb-10 md:pb-24 lg:pb-24 overflow-hidden flex flex-col"
+      className="relative overflow-hidden flex flex-col px-[30px] md:px-20 lg:px-[10.5%] 3xl:max-w-[1536px] mx-auto 3xl:px-0"
       id="main-content"
       style={{
         backgroundImage: `url(${homeBgPattern})`,
       }}
     >
-      <img src={PatternBlue} className="facilities-top-corner-pattern z-10" alt="" />
       <div className="z-20">{children}</div>
-      <img src={PatternBlue} className="facilities-footer-pattern z-10" alt="" />
     </div>
-  )
-}
+  );
+};
 
-export default FacilitiesContainer
+export default FacilitiesContainer;

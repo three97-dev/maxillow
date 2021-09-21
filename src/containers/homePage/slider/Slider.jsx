@@ -64,20 +64,18 @@ const SliderWrapper = ({ slides }) => {
   };
 
   return (
-    <>
-      <Slider
-        {...settings}
-        nextArrow={<ArrowRight />}
-        prevArrow={<ArrowLeft />}
-        customPaging={Pagination}
-      >
-        {slides.map((v, i) => {
-          return (
-            <Slide key={i} author={v.node.author} content={v.node.content} />
-          );
-        })}
-      </Slider>
-    </>
+    <Slider
+      {...settings}
+      nextArrow={<ArrowRight />}
+      prevArrow={<ArrowLeft />}
+      customPaging={Pagination}
+    >
+      {slides.map((v, i) => {
+        return (
+          <Slide key={i} author={v.node.author} content={v.node.content} />
+        );
+      })}
+    </Slider>
   );
 };
 

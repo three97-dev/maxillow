@@ -29,7 +29,6 @@
 }
 
 .home-slider-container {
-  // h-[582px] 2xl:h-[500px]
   height: 642px;
 
   @media (min-width: 450px) {
@@ -131,14 +130,6 @@
     }
   }
 }
-
-// .home-slider-image {
-//   // width: 75%;
-
-//   // @media (min-width: 1400px) {
-//   //   width: 90%;
-//   // }
-// }
 
 .slick-track {
   display: flex;

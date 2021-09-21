@@ -19,16 +19,17 @@
 }
 
 .bg-procedures-container {
-  background-image: linear-gradient(180deg, #5765ce 90%, white 90%);
+  background-image: linear-gradient(180deg, #5765ce 90%, transparent 90%);
+  position: relative;
+  z-index: 10;
 
   @media (min-width: 500px) {
-    background-image: linear-gradient(180deg, #5765ce 88%, white 88%);
+    background-image: linear-gradient(180deg, #5765ce 88%, transparent 88%);
   }
 
   @media (min-width: 1024px) {
     background-image: url("../../../images/pattern5.png"),
-      linear-gradient(180deg, #5765ce 78%, white 78%);
-    background-position: left center;
+      linear-gradient(180deg, #5765ce 78%, transparent 78%);
   }
 }
 

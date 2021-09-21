@@ -1,47 +1,28 @@
-import React from "react"
-import RRenderer from "../../../components/richtextRenderer"
+import React from "react";
+import RRenderer from "../../../components/richtextRenderer";
 
-<<<<<<< Updated upstream
-//
-import "./index.scss"
-=======
 import "./index.scss";
->>>>>>> Stashed changes
 
-const Section = ({ title, subTitle, image, description, reverse }) => {
+const Section = ({ title, subTitle, image, description }) => {
   return (
-    <div className="pt-8 md:pt-12 lg:pt-36 global-x-spacing">
-      <div>
-        <div
-          className={`flex flex-col-reverse lg:flex-row${
-            reverse ? "-reverse" : ""
-          } items-center`}
-        >
-          <div className="w-full lg:w-1/2">
-            <img src={image.file.url} className="w-full" alt="" />
-          </div>
-          <div
-            className={`w-full mb-4 lg:mb-0 lg:w-1/2 ${
-              reverse ? "lg:pr-20" : "lg:pl-20"
-            }`}
-          >
-            <div className=" w-full md:w-9/12 lg:w-full mx-auto mb-8 md:mb-10 lg:mb-0">
-              <h1 className="text-center mb-4">{title}</h1>
-              <h4 className="mb-4">{subTitle}</h4>
-              <div>
-                <RRenderer
-                  data={description}
-                  config={{
-                    p: "mt-2 text-text text-sm",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
+    <div className="">
+      <div className="ml-[25px]">
+        {title && <h1 className="mb-4">{title}</h1>}
+        {/* <h3 className="mb-[50px] text-[28px]">{subTitle}</h3> */}
+        <div className="h-[230px] md:h-[200px] 2xl:h-[150px]">
+          <RRenderer
+            data={description}
+            config={{
+              p: "mt-2",
+            }}
+          />
         </div>
       </div>
+      <div className="mt-[50px]">
+        <img src={image.file.url} className="w-full" alt="" />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Section
+export default Section;

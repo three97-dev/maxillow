@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
 import "./index.scss";
 import { RightArrow } from "../../../components/icons";
@@ -9,28 +9,22 @@ import Img3 from "../../../images/gallery/img3.png";
 import Img4 from "../../../images/gallery/img4.png";
 
 const imgs = [Img1, Img2, Img3, Img4];
-
-let currSlide = 0;
+let goToslideHandler = null;
 
 const Pagination = (props) => {
   return <button className="button-pagination" {...props}></button>;
 };
 
-const ArrowRight = ({ onClick }) => {
-  const [slide, setSlide] = useState(currSlide);
-
-  useEffect(() => {
-    setSlide(currSlide);
-  }, [currSlide]);
-
+const ArrowRight = ({ onClick, currentSlide, ...props }) => {
   return (
     <div>
       <div className="hidden md:grid grid-cols-2 gap-4 px-[30px] mb-[50px] lg:grid-cols-4 md:px-20 lg:px-[10.5%] 3xl:max-w-[1536px] mx-auto 3xl:px-0">
         {imgs.map((imgSrc, i) => (
           <div
-            className={`"rounded-[10px] max-h-[328px] transition-all rounded-[10px]  overflow-hidden ${
-              slide === i ? "p-0 shadow-3xl m-0" : "p-4 m-0"
+            className={`"rounded-[10px] max-h-[328px] transition-all rounded-[10px]  overflow-hidden cursor-pointer ${
+              currentSlide === i ? "p-0 shadow-3xl m-0" : "p-4 m-0"
             }"`}
+            onClick={() => goToslideHandler(i)}
           >
             <img
               src={imgSrc}
@@ -68,6 +62,18 @@ const SliderWrapper = () => {
     dotsClass: "slider-dots",
   };
 
+  const slider = useRef(null);
+
+  useEffect(() => {
+    console.log(slider);
+
+    if (slider.current) {
+      goToslideHandler = slider.current.slickGoTo;
+    }
+  }, [slider]);
+
+  console.log(slider);
+
   return (
     <div className="relative pb-[127px] 3xl:max-w-[1536px] 3xl:mx-auto 3xl:px-0">
       <div className="hidden md:block pt-[100px] px-20 lg:px-[10.5%]">
@@ -90,7 +96,7 @@ const SliderWrapper = () => {
         customPaging={Pagination}
         nextArrow={<ArrowRight />}
         prevArrow={<ArrowLeft />}
-        beforeChange={(curr, next) => (currSlide = next)}
+        ref={slider}
       >
         {imgs.map((imgSrc) => (
           <div className="px-[30px] pt-[50px] pb-[50px] w-full h-[330px] sm:h-[500px] md:h-[672px] 2xl:h-[828px] md:px-20 lg:px-[10.5%] 3xl:pb-20 3xl:px-0 3xl:max-w-[1536px] 3xl:mx-auto">

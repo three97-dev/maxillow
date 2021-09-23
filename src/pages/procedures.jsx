@@ -42,6 +42,7 @@ const Procedures = ({ data }) => {
                 mainHeading={v.node.mainHeading}
                 description={v.node.description}
                 footerText={v.node.footerText}
+                inverse={i % 2 !== 0}
               />
             );
           })}

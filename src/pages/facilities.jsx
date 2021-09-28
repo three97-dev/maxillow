@@ -19,7 +19,7 @@ const Facilities = ({ data }) => {
       />
       <FacilitiesContainer>
         <h2 className="mt-[100px] text-center">What to Expect</h2>
-        <p className="mt-[50px] mx-auto lg:max-w-4xl 2xl:max-w-7xl 3xl:max-w-[1364px]">
+        <p className="mt-[50px]">
           We are pleased to welcome you to Winnipeg’s newest oral and
           maxillofacial surgical facilities. Our northeast Winnipeg location is
           approximately 8 minutes from downtown with easy access from Henderson

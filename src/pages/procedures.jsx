@@ -24,7 +24,7 @@ const Procedures = ({ data }) => {
           {sectionData[0].node.mainHeading}
         </h2>
 
-        <p className="mt-[50px] mx-auto lg:max-w-4xl 2xl:max-w-7xl 3xl:max-w-[1364px]">
+        <p className="mt-[50px]">
           The consultation is an opportunity to meet each other and discuss your
           surgery. We will review x-rays, medical history and other information
           relevant to your treatment. We always discuss your anesthetic options

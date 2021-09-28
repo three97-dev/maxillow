@@ -8,7 +8,9 @@ function SectionFooter({ footerBg, data = {} }) {
   const { subTitle, title, link, target } = data;
 
   return (
-    <div className={`2xl:px-0 ${footerBg} px-[30px] md:px-20 lg:px-[10.5%]`}>
+    <div
+      className={`2xl:px-0 ${footerBg} px-[30px] md:px-20 lg:px-[10.5%] relative z-[1000]`}
+    >
       <div className="2xl:max-w-[1236px] mx-auto flex justify-between items-center  py-10 z-20">
         <div>
           <p className="uppercase text-white lg:text-sm">

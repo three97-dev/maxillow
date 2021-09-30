@@ -10,6 +10,8 @@ import Slider from "../containers/facilities/slider";
 const Facilities = ({ data }) => {
   const facilitiesHeroData = data.allContentfulHeroFacilities;
   const sectionsData = data.allContentfulSectionsFacilities.edges;
+  const lightBoxImages =
+    data.allContentfulLightboxFacilities.edges[0].node.images;
 
   return (
     <Layout>
@@ -44,7 +46,7 @@ const Facilities = ({ data }) => {
         </div>
       </FacilitiesContainer>
 
-      <Slider />
+      <Slider lightBoxImages={lightBoxImages} />
       <SectionFooter
         data={{
           title: "Contact",
@@ -87,6 +89,18 @@ export const query = graphql`
             }
           }
           reverse
+        }
+      }
+    }
+    allContentfulLightboxFacilities {
+      edges {
+        node {
+          id
+          images {
+            file {
+              url
+            }
+          }
         }
       }
     }

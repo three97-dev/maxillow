@@ -16,7 +16,7 @@ const AboutUsIntroSection = ({ data, ...props }) => {
       id="main-content"
     >
       <div>
-        <div className="flex flex-col lg:flex-row w-full lg:w-full mx-auto mb-[34px] lg:gap-[50px] lg:mb-0">
+        <div className="flex flex-col lg:flex-row w-full lg:w-full mx-auto mb-[34px] lg:space-x-[50px] lg:mb-0">
           <div className="lg:flex relative lg:flex-col lg:justify-between lg:max-w-[300px] xl:max-w-[400px]">
             <div className="hidden lg:block absolute w-[1px] h-[55%] bg-[#7AD0DD] top-5 right-3" />
             <h2 className="text-center lg:text-left mb-[50px]">{title}</h2>

@@ -9,7 +9,7 @@ function Service(props) {
   return (
     <div className="container mx-auto max-w-7xl p-4 py-24">
       <div
-        className={`flex gap-6 ${
+        className={`flex space-y-6 md:space-x-6 md:space-y-0 ${
           props.reverse ? "md:flex-row-reverse justify-between" : "md:flex-row"
         } flex-col items-center`}
       >
@@ -38,7 +38,7 @@ function Service(props) {
 
           {props.quote && (
             <div
-              className={`flex-1 flex  flex-row items-center gap-6 ${
+              className={`flex-1 flex flex-row items-center space-x-6 ${
                 props.quote === "" ? "hidden" : ""
               }`}
             >

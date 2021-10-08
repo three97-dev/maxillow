@@ -29,7 +29,7 @@ function HeroSection({
       >
         <img src={About} className="w-full absolute bg-about lg:hidden" />
         <div className="relative container mx-auto max-w-7xl flex flex-col justify-center lg:pb-0 lg:max-w-[900px] xl:max-w-[995px] 3xl:max-w-[1502px]">
-          <div className="lg:w-full flex lg:flex-row flex-col-reverse justify-center items-center px-[30px] mb-[60px] md:mb-[130px] lg:px-0 lg:mb-0 lg:gap-10 xl:gap-[109px] lg:min-h-[440px] 3xl:gap-[154px]">
+          <div className="lg:w-full flex lg:flex-row flex-col-reverse justify-center items-center px-[30px] mb-[60px] md:mb-[130px] lg:px-0 lg:mb-0 lg:space-x-10 xl:space-x-[109px] lg:min-h-[440px] 3xl:space-x-[154px]">
             <div className="w-full lg:flex-1 lg:h-full lg:w-auto">
               <img
                 className="w-full"

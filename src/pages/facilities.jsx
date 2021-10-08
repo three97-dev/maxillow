@@ -32,7 +32,7 @@ const Facilities = ({ data }) => {
           Both of our facilities are wheelchair accessible and have free
           parking.
         </p>
-        <div className="flex flex-col gap-[50px] mt-[50px] lg:grid lg:grid-cols-2 lg:gap-4">
+        <div className="flex flex-col space-y-[50px] mt-[50px] lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4">
           {sectionsData.map((v, i) => (
             <Section
               image={v.node.image}

@@ -26,7 +26,7 @@ function Footer() {
   return (
     <div className="flex flex-col items-center py-[100px] px-[30px] bg-gray-800 md:px-0 relative z-[1000]">
       <img src={FooterLogo} alt="" className="w-full md:w-54 md:w-64 mx-auto" />
-      <nav className="flex flex-col md:flex-row gap-8 items-center w-full md:w-auto md:gap-16 mt-[50px] mx-auto">
+      <nav className="flex flex-col md:flex-row space-y-8 items-center w-full md:w-auto md:space-y-0 md:space-x-16 mt-[50px] mx-auto">
         {navigations.map((item) => (
           <Link
             className="footer-nav-link block md:inline-block no-underline text-primary"

@@ -23,7 +23,7 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
       id={props.title.toLowerCase().split(" ").join("-")}
     >
       <div
-        className={`flex-col-reverse flex gap-[50px] lg:gap-[17px] relative ${
+        className={`flex flex-col-reverse space-y-[50px lg:space-x-[17px] lg:space-y-0 relative ${
           props.isCentered
             ? ""
             : props.reverse
@@ -32,7 +32,11 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
         }`}
       >
         {blueDots && <img src={PatternBlue} className="blue-pattern" alt="" />}
-        <div className="z-20 w-full relative flex-1">
+        <div
+          className={`z-20 w-full relative flex-1 mt-[50px] lg:mt-0 ${
+            props.reverse ? "lg:ml-[17px]" : "lg:mr-[17px]"
+          }]`}
+        >
           {addBlob && (
             <>
               <div className="home-section-bg md:hidden lg:block">
@@ -61,7 +65,7 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
               />
               {props.isCentered && (
                 <img
-                  className="z-10 absolute bottom-0 w-full lg:max-w-[706px] lg:-bottom-5 lg:left-1/2 lg:transform lg:-translate-x-1/2"
+                  className="z-10 absolute bottom-0 w-full lg:max-w-[606px] xl:max-w-[706px] lg:-bottom-5 lg:left-1/2 lg:transform lg:-translate-x-1/2"
                   srcSet={getSrcSet(props.image?.file?.url, imgSize.width)}
                   ref={imgRef}
                   alt=""

@@ -11,7 +11,7 @@ function Doctor1({ title, description, src, quote, doctor }) {
         <div className="hidden md:block pattern-2-container inverse">
           <img src={patternBlue} className="pattern-2" alt="pattern" />
         </div>
-        <div className="flex flex-col items-end gap-[50px] lg:z-20 lg:items-stretch lg:gap-[35px] lg:flex-row-reverse lg:pl-[10.5%] 2xl:p-0">
+        <div className="flex flex-col items-end space-y-[50px] lg:z-20 lg:items-stretch lg:space-x-[35px] lg:space-y-0 lg:flex-row-reverse lg:pl-[10.5%] 2xl:p-0">
           <div className="w-full relative flex top-[13px] lg:flex-1">
             <img src={patternBlue} className="pattern-1 inverse z-10" alt="" />
             <img

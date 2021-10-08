@@ -17,7 +17,7 @@ function Service(props) {
         </div>
       </div>
       <div className="border-t border-secondary max-w-lg mx-auto w-40 lg:w-60 my-[50px]" />
-      <div className="flex flex-col lg:flex-row gap-[50px] justify-center items-center flex-nowrap lg:justify-between mb-[50px] md:mb-[75px]">
+      <div className="flex flex-col lg:flex-row space-y-[50px] lg:space-x-[50px] lg:space-y-0 justify-center items-center flex-nowrap lg:justify-between mb-[50px] md:mb-[75px]">
         {data.images.map((v, i) => {
           return (
             <img

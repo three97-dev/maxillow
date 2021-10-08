@@ -32,7 +32,7 @@ const Procedures = ({ data }) => {
           anesthesia) along with risks/benefits and associated costs.
         </p>
 
-        <div className="my-[100px] flex flex-col gap-[50px] lg:flex-row lg:gap-4">
+        <div className="my-[100px] flex flex-col space-y-[50px] lg:flex-row lg:space-x-4 lg:space-y-0">
           {sectionData.map((v, i) => {
             return (
               <Section

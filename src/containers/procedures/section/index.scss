@@ -2,7 +2,11 @@ $bar-color: #fce7de;
 $bar-color-inverse: #e0f6f7;
 
 .procedure-section-bar {
-  background-color: $bar-color;
+  background-color: rgba($color: $bar-color, $alpha: 0.77);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+
   // height: 85px;
   // padding: 12px 0px;
   // display: flex;
@@ -39,10 +43,12 @@ $bar-color-inverse: #e0f6f7;
   // }
 
   &.bar-inverse {
-    background-color: $bar-color-inverse;
+    // background-color: $bar-color-inverse;
+    background-color: rgba($color: $bar-color-inverse, $alpha: 0.7);
     &::after,
     &::before {
-      background-color: $bar-color-inverse;
+      // background-color: $bar-color-inverse;
+      background-color: rgba($color: $bar-color-inverse, $alpha: 0.7);
     }
   }
 }

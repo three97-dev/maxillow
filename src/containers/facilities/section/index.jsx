@@ -5,15 +5,15 @@ import "./index.scss";
 
 const Section = ({ title, subTitle, image, description }) => {
   return (
-    <div className="">
+    <div className="flex flex-col justify-between">
       <div>
         {/* {title && <h1 className="mb-4">{title}</h1>} */}
         <h3 className="mb-[50px]">{title}</h3>
-        <div className="h-[230px] md:h-[200px] 2xl:h-[150px]">
+        <div>
           <RRenderer
             data={description}
             config={{
-              p: "mt-2",
+              p: "",
             }}
           />
         </div>

@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import SectionFooter from "./../components/sectionFooter";
 import { HeroSection, Service, Slider } from "../containers/homePage";
 //
-import "../css/custom_forms_styles.scss";
 import homeBgPattern from "../images/homeBgPattern.svg";
 import Testimonials from "./../images/testimonails.png";
 

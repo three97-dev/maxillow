@@ -1,11 +1,38 @@
 import React from "react";
+import Dropdown from "./Dropdown";
 const Form_1 = () => {
   return (
     <div className=" p-8 pt-20 md:px-30 xl:px-60">
       <h1>Referral Information</h1>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="my-4 md:w-[49%]">
-          <select
+          <Dropdown
+            name="Surgeon"
+            placeholder="Surgeon"
+            option={[
+              "Dr. Kurt Scherle",
+              "Dr. Kevin Vint",
+              "Dr. Jeff Bassey",
+              "Dr. Victor Le",
+              "First available",
+            ]}
+          />
+        </div>
+        <div className="my-4 md:w-[49%]">
+          <Dropdown
+            name="Location"
+            placeholder="Location"
+            option={[
+              "Lahore",
+              "Macao",
+              "Sants Petersburgy",
+              "Moscow",
+              "Krasnodar",
+            ]}
+          />
+        </div>
+        {/* <div className="my-4 md:w-[49%]"> */}
+        {/* <select
             name="surgeon"
             class="w-full p-3 rounded-lg outline-none border-none shadow-inner"
           >
@@ -17,9 +44,9 @@ const Form_1 = () => {
             <option value="Dr.JeffBassey">Dr. Jeff Bassey</option>
             <option value="Dr.VictorLe">Dr. Victor Le</option>
             <option value="first-available">First available</option>
-          </select>
-        </div>
-        <div className=" my-4 md:w-[49%]">
+          </select> */}
+        {/* </div> */}
+        {/* <div className=" my-4 md:w-[49%]">
           <select
             name="location"
             class="w-full p-3 rounded-lg outline-none border-none shadow-inner"
@@ -32,7 +59,7 @@ const Form_1 = () => {
             <option value="Bangkok">Bangkok</option>
             <option value="SaintPetersburg">Saint Petersburg</option>
           </select>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="my-4 md:w-[49%]">

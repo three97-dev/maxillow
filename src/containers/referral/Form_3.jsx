@@ -10,14 +10,30 @@ const Form_2 = () => {
             name="name"
             placeholder="Name"
             type="text"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className=" w-full p-3 rounded-lg outline-none border-none shadow-inner"
           />
         </div>
-        <div className="my-3 md:w-[49%]">
+        <div className="flex  flex-nowrap  items-center my-3 md:w-[49%] text-[#707070]">
+          <span className="capitalize">d.o.b.:</span>
           <input
-            name="date"
-            type="date"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            name="DD"
+            placeholder="DD"
+            type="text"
+            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner mx-5"
+          />
+          <span>/</span>
+          <input
+            name="MM"
+            placeholder="MM"
+            type="text"
+            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner mx-5"
+          />
+          <span>/</span>
+          <input
+            name="YYYY"
+            placeholder="YYYY"
+            type="text"
+            className=" w-4 flex-2  p-3 rounded-lg outline-none border-none shadow-inner  ml-5"
           />
         </div>
       </div>

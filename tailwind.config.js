@@ -47,7 +47,6 @@ module.exports = {
       "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       inner: "inset 0 0 10px #b9b5b5",
-    
 
       none: "none",
     },

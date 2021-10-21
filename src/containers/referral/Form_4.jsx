@@ -1,4 +1,5 @@
 import React from "react";
+import MyCheckbox from "./Checkbox";
 const Form_4 = () => {
   return (
     <div className=" p-8 md:px-30 xl:px-60 ">
@@ -11,72 +12,46 @@ const Form_4 = () => {
           </h6>
 
           <div className="mt-3 mb-3">
-            <label className="mt-4 ml-3">
-              <input
-                name="Anesthetic Preference[]"
-                type="checkbox"
-                value="Local"
-                className=" w-4 h-4"
-              />
-              Local
-            </label>
-            <br />
-            <label className="mt-4 ml-3">
-              <input
-                type="checkbox"
-                name="Anesthetic Preference[]"
-                value="Sedation"
-                className=" w-4 h-4"
-              />
-              Sedation
-            </label>
-            <br />
-            <label className="mt-4 ml-3">
-              <input
-                type="checkbox"
-                name="Anesthetic Preference[]"
-                value="General"
-                className=" w-4 h-4"
-              />
-              General
-            </label>
-            <br />
+            <MyCheckbox
+              label="Local"
+              name="Anesthetic Preference[]"
+              value="Local"
+            />
+
+            <MyCheckbox
+              label="Sedation"
+              name="Anesthetic Preference[]"
+              value="Sedation"
+            />
+
+            <MyCheckbox
+              label="General"
+              name="Anesthetic Preference[]"
+              value="General"
+            />
           </div>
         </div>
         <div className="my-4 md:w-[49%]">
           <h6 className="uppercase text-[#707070] mt-4 ">Radiograph:</h6>
 
           <div className="mt-3 mb-3">
-            <label className="mt-4 ml-3">
-              <input
-                type="checkbox"
-                name="Radiograph[]"
-                value="Emailed"
-                className=" w-4 h-4"
-              />
-              Emailed
-            </label>
-            <br />
-            <label className="mt-4 ml-3">
-              <input
-                type="checkbox"
-                name="Radiograph[]"
-                value="Enclosed"
-                className=" w-4 h-4"
-              />
-              Enclosed
-            </label>
-            <br />
-            <label className="mt-4 ml-3">
-              <input
-                type="checkbox"
-                name="Radiograph[]"
-                value="Please Take"
-                className=" w-4 h-4"
-              />
-              Please Take
-            </label>
-            <br />
+            <MyCheckbox
+              label="Emailed"
+              name="Anesthetic Preference[]"
+              value="Emailed"
+            />
+
+            <MyCheckbox
+              label="Enclosed"
+              name="Anesthetic Preference[]"
+              value="Enclosed"
+            />
+
+            <MyCheckbox
+              label="Please Take"
+              name="Anesthetic Preference[]"
+              value="Please Take"
+            />
           </div>
         </div>
       </div>

@@ -1,11 +1,20 @@
 import React from "react";
-import Dropdown from "./Dropdown";
+import Dropdown_2 from "./Dropdown_2";
 const Form_1 = () => {
   return (
     <div className=" p-8 pt-20 md:px-30 xl:px-60">
       <h1>Referral Information</h1>
       <div className="flex flex-col md:flex-row justify-between">
-        <div className="my-4 md:w-[49%]">
+        <Dropdown_2
+          placeholder="Surgeon"
+          option={[
+            { id: 0, title: "Dr, First", select: false },
+            { id: 1, title: "Dr, Second", select: false },
+            { id: 2, title: "Dr, Third", select: false },
+          ]}
+        />
+
+        {/* <div className="my-4 md:w-[49%]">
           <Dropdown
             name="Surgeon"
             placeholder="Surgeon"
@@ -17,20 +26,7 @@ const Form_1 = () => {
               "First available",
             ]}
           />
-        </div>
-        <div className="my-4 md:w-[49%]">
-          <Dropdown
-            name="Location"
-            placeholder="Location"
-            option={[
-              "Lahore",
-              "Macao",
-              "Sants Petersburgy",
-              "Moscow",
-              "Krasnodar",
-            ]}
-          />
-        </div>
+        </div> */}
         {/* <div className="my-4 md:w-[49%]"> */}
         {/* <select
             name="surgeon"

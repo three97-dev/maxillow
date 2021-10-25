@@ -10753,6 +10753,11 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-custom-checkbox@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-custom-checkbox/-/react-custom-checkbox-2.0.0.tgz#2c5a027832320723b46b0a4444be3744e518ddd9"
+  integrity sha512-YWwYEfQOMGmWUTHqLE9NHKxToGhxEN/DnYUqNuuFDDhxKqlrx5hyuePwLKn2pzFLmWTOkVNeeTD/L2SW1vaggQ==
+
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"
@@ -10811,6 +10816,11 @@ react-helmet@^6.1.0:
     prop-types "^15.7.2"
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
+
+react-icons@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
+  integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"

@@ -7,7 +7,7 @@ const Form_5 = () => {
         name="Referring Doctor Signature"
         placeholder="Referring Doctor Signature"
         type="text"
-        className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+        className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
       />
 
       <div className="flex justify-center">

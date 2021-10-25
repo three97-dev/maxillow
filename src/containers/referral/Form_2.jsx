@@ -128,7 +128,7 @@ const Form_2 = () => {
                 ))}
               </div>
             </div>
-            <span className="absolute left-[47%] md:left-[48.7%]  border-l-2 border-[#D6D4D1] h-[1000px]"></span>
+            <span className="absolute left-[47%] md:left-[48.7%]  border-l-2 border-[#D6D4D1] h-[9999px]"></span>
           </div>
           <div className="flex">
             <div className=" flex-col justify-start w-2/4 pt-4">

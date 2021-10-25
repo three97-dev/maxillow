@@ -1,4 +1,6 @@
 import React from "react";
+import DOB from "./DOB";
+
 const Form_2 = () => {
   return (
     <div className=" p-8 pt-10 md:px-30 xl:px-60 ">
@@ -13,28 +15,8 @@ const Form_2 = () => {
             className=" w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
-        <div className="flex  flex-nowrap  items-center my-3 md:w-[49%] text-[#707070]">
-          <span className="capitalize">d.o.b.:</span>
-          <input
-            name="DD"
-            placeholder="DD"
-            type="text"
-            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner insetShadow mx-5"
-          />
-          <span>/</span>
-          <input
-            name="MM"
-            placeholder="MM"
-            type="text"
-            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner insetShadow mx-5"
-          />
-          <span>/</span>
-          <input
-            name="YYYY"
-            placeholder="YYYY"
-            type="text"
-            className=" w-4 flex-2  p-3 rounded-lg outline-none border-none shadow-inner insetShadow  ml-5"
-          />
+        <div className="my-3 md:w-[49%] text-[#707070]">
+          <DOB />
         </div>
       </div>
 

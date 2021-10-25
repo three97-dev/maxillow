@@ -61,7 +61,7 @@ const Form_4 = () => {
             name="Supernumerary (99), Qty."
             placeholder="Supernumerary (99), Qty."
             type="text"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
         <div className="mt-4 md:w-[49%]">
@@ -69,7 +69,7 @@ const Form_4 = () => {
             name="Location"
             placeholder="Location"
             type="text"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
       </div>
@@ -79,7 +79,7 @@ const Form_4 = () => {
           rows="3"
           cols="50"
           placeholder="Medical Alert"
-          className="w-full p-3 rounded-lg outline-none border-none shadow-inner mt-7  mt-"
+          className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow mt-7  mt-"
         ></textarea>
       </div>
       <div>
@@ -88,7 +88,7 @@ const Form_4 = () => {
           rows="3"
           cols="50"
           placeholder="Additional Notes"
-          className="w-full p-3 rounded-lg outline-none border-none shadow-inner mt-5"
+          className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow mt-5"
         ></textarea>
       </div>
       <hr className=" border-t-2 border-secondary  mt-12" />

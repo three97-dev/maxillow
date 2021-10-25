@@ -75,7 +75,7 @@ const Form_2 = () => {
             name="Brand"
             placeholder="Brand"
             type="text"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none  insetShadow"
           />
         </div>
         <div className="my-4 md:w-[49%]">
@@ -83,7 +83,7 @@ const Form_2 = () => {
             name="Site"
             placeholder="Site"
             type="text"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
       </div>

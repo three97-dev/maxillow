@@ -1,7 +1,7 @@
-import React from "react"
-import PhoneImage from "./../../../images/PhoneImage.png"
+import React from "react";
+import PhoneImage from "./../../../images/PhoneImage.png";
 
-import "./index.scss"
+import "./index.scss";
 
 function ContactForm(props) {
   return (
@@ -26,14 +26,14 @@ function ContactForm(props) {
                 <input
                   placeholder="First Name"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
               <div className="flex-1 m-2">
                 <input
                   placeholder="Last Name"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
             </div>
@@ -43,14 +43,14 @@ function ContactForm(props) {
                 <input
                   placeholder="Email Address"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
               <div className="flex-1 m-2">
                 <input
                   placeholder="Phone Number"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
             </div>
@@ -59,7 +59,7 @@ function ContactForm(props) {
               <div className="flex-1 m-2">
                 <textarea
                   placeholder="Message"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
                   rows={6}
                 ></textarea>
               </div>
@@ -81,7 +81,7 @@ function ContactForm(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ContactForm
+export default ContactForm;

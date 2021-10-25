@@ -22,52 +22,14 @@ const Form_1 = () => {
           <Dropdown
             placeholder="Location"
             name="Location"
-            option={["Lahore", "Moscow", "Krasnodar", "Sants Petersburg"]}
-          />
-        </div>
-
-        {/* <div className="my-4 md:w-[49%]">
-          <Dropdown
-            name="Surgeon"
-            placeholder="Surgeon"
             option={[
-              "Dr. Kurt Scherle",
-              "Dr. Kevin Vint",
-              "Dr. Jeff Bassey",
-              "Dr. Victor Le",
-              "First available",
+              "Location_01",
+              "Location_02",
+              "Location_03",
+              "Location_04",
             ]}
           />
-        </div> */}
-        {/* <div className="my-4 md:w-[49%]"> */}
-        {/* <select
-            name="surgeon"
-            class="w-full p-3 rounded-lg outline-none border-none shadow-inner"
-          >
-            <option value="not-selected" disabled selected>
-              Surgeon
-            </option>
-            <option value="Dr.KurtScherle">Dr. Kurt Scherle</option>
-            <option value="Dr.KevinVint">Dr. Kevin Vint</option>
-            <option value="Dr.JeffBassey">Dr. Jeff Bassey</option>
-            <option value="Dr.VictorLe">Dr. Victor Le</option>
-            <option value="first-available">First available</option>
-          </select> */}
-        {/* </div> */}
-        {/* <div className=" my-4 md:w-[49%]">
-          <select
-            name="location"
-            class="w-full p-3 rounded-lg outline-none border-none shadow-inner"
-          >
-            <option value="location" disabled selected>
-              Location
-            </option>
-            <option value="Lahore">Lahore</option>
-            <option value="Macau">Macau</option>
-            <option value="Bangkok">Bangkok</option>
-            <option value="SaintPetersburg">Saint Petersburg</option>
-          </select>
-        </div> */}
+        </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="my-4 md:w-[49%]">
@@ -75,7 +37,7 @@ const Form_1 = () => {
             name="Referring Doctor Name"
             placeholder="Referring Doctor Name"
             type="text"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
         <div className="my-4 md:w-[49%]">
@@ -83,7 +45,7 @@ const Form_1 = () => {
             name="Referring Doctor Phone"
             placeholder="Referring Doctor Phone"
             type="text"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
       </div>

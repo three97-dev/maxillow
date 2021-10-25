@@ -10,7 +10,7 @@ const Form_2 = () => {
             name="name"
             placeholder="Name"
             type="text"
-            className=" w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className=" w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
         <div className="flex  flex-nowrap  items-center my-3 md:w-[49%] text-[#707070]">
@@ -19,21 +19,21 @@ const Form_2 = () => {
             name="DD"
             placeholder="DD"
             type="text"
-            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner mx-5"
+            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner insetShadow mx-5"
           />
           <span>/</span>
           <input
             name="MM"
             placeholder="MM"
             type="text"
-            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner mx-5"
+            className=" w-4 flex-1  p-3 rounded-lg outline-none border-none shadow-inner insetShadow mx-5"
           />
           <span>/</span>
           <input
             name="YYYY"
             placeholder="YYYY"
             type="text"
-            className=" w-4 flex-2  p-3 rounded-lg outline-none border-none shadow-inner  ml-5"
+            className=" w-4 flex-2  p-3 rounded-lg outline-none border-none shadow-inner insetShadow  ml-5"
           />
         </div>
       </div>
@@ -44,7 +44,7 @@ const Form_2 = () => {
             name="phone"
             placeholder="Phone"
             type="tel"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
         <div className="my-3 md:w-[49%]">
@@ -52,7 +52,7 @@ const Form_2 = () => {
             name="email"
             placeholder="Email"
             type="email"
-            className="w-full p-3 rounded-lg outline-none border-none shadow-inner"
+            className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>
       </div>
@@ -63,7 +63,7 @@ const Form_2 = () => {
           rows="3"
           cols="50"
           placeholder="Insurance Information"
-          className="w-full p-3 rounded-lg outline-none border-none shadow-inner my-3"
+          className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow my-3"
         ></textarea>
       </div>
 

@@ -6,13 +6,16 @@ import RRenderer from "../../../components/richtextRenderer";
 
 // Assets and Styles
 import arrowImage from "../../../images/ArrowRedRight.png";
+import { RightArrow } from "../../../components/icons";
+import { useApplyAfterWidth } from "../../../hooks/getWidth";
 
 const AboutUsIntroSection = ({ data, ...props }) => {
   const { title, image, quote, description } = data;
+  const isDesktop = useApplyAfterWidth(1023);
 
   return (
     <div
-      className="2xl:max-w-[1236px] mx-auto pt-[50px] px-[30px] md:pt-[75px] md:px-20 lg:pt-[50px] lg:px-[10.5%] 2xl:px-0"
+      className=" mx-auto px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] pt-[50px] px-[30px] md:pt-[75px] lg:pt-[50px]"
       id="main-content"
     >
       <div>
@@ -32,7 +35,7 @@ const AboutUsIntroSection = ({ data, ...props }) => {
               }}
             />
             <div
-              className={`hidden lg:flex home-section-footer px-5 pt-[38px] pb-11 items-center mt-0 md:mt-0 lg:mt-[50px] lg:px-[50px]`}
+              className={`hidden lg:flex home-section-footer px-[20px] lg:px-[50px] h-[127px] items-center mt-0 md:mt-0 lg:mt-[50px] lg:px-[50px]`}
             >
               <div className="flex-1">
                 <h6 className="uppercase">{props.footer.subTitle}</h6>
@@ -40,7 +43,7 @@ const AboutUsIntroSection = ({ data, ...props }) => {
               </div>
               <div>
                 <Link to={props.footer.link}>
-                  <img src={arrowImage} alt="" />
+                  <RightArrow size={isDesktop ? 60 : 37} color={"#F4562D"} />
                 </Link>
               </div>
             </div>
@@ -57,7 +60,7 @@ const AboutUsIntroSection = ({ data, ...props }) => {
               </div>
               <div>
                 <Link to={props.footer.link}>
-                  <img src={arrowImage} alt="" />
+                  <RightArrow size={isDesktop ? 60 : 37} color={"#F4562D"} />
                 </Link>
               </div>
             </div>

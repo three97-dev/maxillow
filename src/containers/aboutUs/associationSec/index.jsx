@@ -7,7 +7,7 @@ function Service(props) {
   const imgSize = useWindowSize(imgRef);
 
   return (
-    <div className="2xl:max-w-[1236px] mx-auto 2xl:px-0 px-[30px] mt-[75px] md:mt-[100px] lg:mt-[50px] lg:px-[10.5%]">
+    <div className="mx-auto px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] mt-[75px] md:mt-[100px] lg:mt-[50px]">
       <div className="flex flex-col max-w-3xl m-auto items-center">
         <div className="w-sm flex-1">
           <h2 className="text-center">{data.title}</h2>

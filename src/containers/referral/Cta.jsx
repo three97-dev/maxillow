@@ -1,7 +1,7 @@
 import React from "react"
 const Cta = () => {
   return (
-    <header className="bg-primary p-16 sm:px-24 md:px-36 md:pt-24 md:pb-20 2xl:px-80 3xl:px-96 flex flex-col xl:flex-row xl:text-right justify-center items-center text-center">
+    <header className="bg-primary p-16 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] md:pt-24 md:pb-20 flex flex-col xl:flex-row xl:text-right justify-center items-center text-center">
       <h1 className="text-white mb-4 xl:mb-0   xl:pr-12 flex-shrink-0">
         Make A Referral
       </h1>

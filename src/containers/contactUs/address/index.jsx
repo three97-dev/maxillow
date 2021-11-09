@@ -1,71 +1,56 @@
-import React from "react"
+import React from "react";
 
 // Components
-import Map from "./map"
+import Map from "./map";
 
 // Assets and Styles
-import "./index.scss"
-import Pattern from "../../../images/pattern.svg"
+import "./index.scss";
+import Pattern from "../../../images/pattern.svg";
 
 function Address(props) {
   return (
-    <div className="global-x-spacing relative overflow-hidden">
+    <div className="relative overflow-hidden px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
       <img src={Pattern} className="contact-pattern-corner" alt="" />
-      <div className=" py-4 lg:py-24">
-        <div className="flex lg:flex-row flex-col justify-start items-center">
-          <div className="text-3xl lg:w-1/3 lg:pr-32 xl:pr-44">
-            <div>
-              <h3 className="py-4 text-center lg:text-left">Locations</h3>
-            </div>
-
-            <div className="hidden lg:block">
-              {props.data.edges.map((v, i) => (
-                <div key={i}>
-                  {i > 0 ? <hr className="content-seprator my-4" /> : ""}
-                  <h4 className="font-light">{v.node.office}</h4>
-                  <p className="text-base py-4">{v.node.address}<br />{v.node.address2}<br />{v.node.address3}</p>
-                  {v?.node?.contact?.map((value, index) => (
-                    <p className="text-base">{value}</p>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="w-full lg:w-2/3 relative">
-            <img src={Pattern} className="contact-pattern-map" alt="" />
-            <div className="flex flex-col lg:flex-row">
-              <div className="w-full lg:w-1/2 mb-2 lg:mb-0 lg:mr-2 ">
-                <Map link={props.mapOneLink} />
-              </div>
-              <div className="w-full lg:w-1/2 mt-2 lg:mt-0 lg:ml-2">
-                <Map link={props.mapTwoLink} />
-              </div>
-            </div>
+      <div className="text-center 2xl:max-w-[1364px] 2xl:mx-auto mt-[63px] md:mt-[75px] lg:mt-[100px]">
+        <h1>{props.title}</h1>
+        <p className="text-[16px] leading-[22px] mt-[30px] lg:mt-[20px]">
+          <span className="font-bold">Phone</span>: {props.phone}&nbsp;|&nbsp;
+          <span className="font-bold">Fax</span>: {props.fax}
+        </p>
+        <p className="mt-[30px]">{props.text}</p>
+      </div>
+      <hr className="max-w-[1088px] w-full h-[1px] bg-[#7AD0DD] mx-auto my-[30px]" />
+      <div className="lg:flex mx-auto 2xl:max-w-[1364px] w-full mb-[65px] md:mb-[75px] lg:mb-[100px]">
+        <div className="w-full text-center lg:mr-[8px]">
+          <h4 className="text-[22px] leading-[28px] font-bold">{props.data.edges[0].node.office}</h4>
+          <p className="text-[16px] leading-[22px] pt-[20px] pb-[30px]">
+            {props.data.edges[0].node.address}
+            <br />
+            {props.data.edges[0].node.address2}
+            <br />
+            {props.data.edges[0].node.address3}
+          </p>
+          <div className="w-full h-[300px] 2xl:h-[409px] mb-2 lg:mb-0 lg:mr-2 ">
+            <Map link={props.mapOneLink} />
           </div>
         </div>
-
-        <div className="flex flex-col md:flex-row lg:hidden my-12 global-x-spacing">
-          {props.data.edges.map((v, i) => (
-            <div
-              key={i}
-              className={`w-full md:w-1/2 ${
-                i === 0
-                  ? "md:border-r border-secondary md:pr-24"
-                  : "pt-8 md:pt-0 md:pl-24"
-              }`}
-            >
-              <h3 className="font-light">{v.node.office}</h3>
-              <p className="text-base py-4">{v.node.address}<br />{v.node.address2}<br />{v.node.address3}</p>
-              {v?.node?.contact?.map((value, index) => (
-                <p className="text-base">{value}</p>
-              ))}
-              {i === 0 && <hr className="content-seprator mt-8" />}
-            </div>
-          ))}
+        <div className="w-full text-center lg:ml-[8px] mt-[30px] lg:mt-[0px]">
+          <h4 className="text-[22px] leading-[28px] font-bold">{props.data.edges[1].node.office}</h4>
+          <p className="text-[16px] leading-[22px] pt-[20px] pb-[30px]">
+            {props.data.edges[1].node.address}
+            <br />
+            {props.data.edges[1].node.address2}
+            <br />
+            {props.data.edges[1].node.address3}
+          </p>
+          <div className="w-full mb-2 lg:mb-0 lg:mr-2">
+            <Map link={props.mapTwoLink} />
+          </div>
         </div>
+        <img src={Pattern} className="contact-pattern-map" alt="" />
       </div>
     </div>
-  )
+  );
 }
 
-export default Address
+export default Address;

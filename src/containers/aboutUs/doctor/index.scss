@@ -76,16 +76,16 @@ $bar-color-2: #fce7de;
 .pattern-1 {
   display: none;
   position: absolute;
-  left: 0;
+  left: 25%;
   top: 0;
   height: 380px;
 
   &.inverse {
-    left: 7%;
+    left: 25%;
   }
 
   &.inverse-orange {
-    right: 7%;
+    right: 25%;
   }
 
   @media (min-width: 1280px) {

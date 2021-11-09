@@ -1,0 +1,84 @@
+.gridFooter {
+  display: grid;
+  grid-template-areas:
+    ". LogoText LogoText ."
+    ". . . ."
+    ". Links Links ."
+    ". . . ."
+    ". Button Button ."
+    ". . . ."
+    ". AddressFirst AddressSecond .";
+  grid-template-rows: auto 28px auto 0px auto 33px auto;
+  grid-template-columns: auto;
+
+  @screen md {
+    grid-template-areas:
+      "LogoText LogoText LogoText LogoText"
+      ". . . ."
+      "Links AddressFirst AddressSecond Button";
+    grid-template-rows: auto 50px auto;
+    grid-template-columns:
+      minmax(10rem, 15.6rem)
+      minmax(10rem, 15.6rem)
+      minmax(10rem, 15.6rem)
+      minmax(10rem, 15.6rem);
+    align-items: start;
+  }
+
+  @screen xl {
+    grid-template-columns:
+      minmax(17rem, 25.6rem)
+      minmax(6.3rem, 10.8rem)
+      minmax(10rem, 16.5rem)
+      minmax(1.6rem, 2.5rem)
+      minmax(10rem, 16.5rem)
+      minmax(1.4rem, 2.5rem)
+      minmax(10rem, 16.5rem)
+      minmax(1rem, 1.5rem)
+      minmax(12rem, 16.5rem);
+    grid-template-rows: auto;
+    grid-template-areas: "LogoText . Links . AddressFirst . AddressSecond . Button";
+    align-items: start;
+  }
+
+  @screen 2xl {
+    grid-template-columns:
+      minmax(21rem, 39.8rem)
+      minmax(6rem, 10.8rem)
+      minmax(6.4rem, 25.7rem)
+      minmax(2rem, 4.8rem)
+      minmax(10rem, 25.7rem)
+      minmax(2rem, 3.8rem)
+      minmax(8rem, 25.7rem)
+      minmax(3rem, 3rem)
+      minmax(16rem, 26rem);
+    grid-template-rows: auto;
+    grid-template-areas: "LogoText . Links . AddressFirst . AddressSecond . Button";
+    align-items: start;
+  }
+}
+
+.gridLogoTextArea {
+  grid-area: LogoText;
+}
+
+.gridLinksArea {
+  grid-area: Links;
+}
+
+.gridButtonArea {
+  grid-area: Button;
+}
+
+.gridAddressFirstArea {
+  grid-area: AddressFirst;
+}
+
+.gridAddressSecondArea {
+  grid-area: AddressSecond;
+}
+
+.footer-shadow {
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.3);
+}

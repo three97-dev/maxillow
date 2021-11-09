@@ -3,7 +3,7 @@ import DOB from "./DOB";
 
 const Form_2 = () => {
   return (
-    <div className=" p-8 pt-10 md:px-30 xl:px-60 ">
+    <div className="p-8 pt-10 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
       <h1>Patient Information</h1>
 
       <div className="flex flex-col md:flex-row justify-between">

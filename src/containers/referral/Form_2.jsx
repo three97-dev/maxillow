@@ -2,7 +2,7 @@ import React from "react";
 import MyCheckbox from "./Checkbox";
 const Form_2 = () => {
   return (
-    <div className=" p-8 md:px-30 xl:px-60 ">
+    <div className="p-8 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
       <h1>Procedure Details</h1>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="my-4 md:w-[49%]">

@@ -7,7 +7,7 @@ import homeBgPattern from "../../images/homeBgPattern.svg";
 const FacilitiesContainer = ({ children }) => {
   return (
     <div
-      className="relative overflow-hidden flex flex-col px-[30px] md:px-20 lg:px-[10.5%] 3xl:max-w-[1536px] mx-auto 3xl:px-0"
+      className="relative overflow-hidden flex flex-col px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] mx-auto"
       id="main-content"
       style={{
         backgroundImage: `url(${homeBgPattern})`,

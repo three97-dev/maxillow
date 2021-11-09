@@ -64,19 +64,17 @@
   position: absolute;
   right: 0px;
   bottom: 0px;
-  transform: translateY(calc(50% - 7px));
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1;
 
   @media (min-width: 1024px) {
-    right: 10.5%;
-    top: 40%;
-    bottom: unset;
-    transform: none;
+    transform: translateY(-50%);
+    right: 83px;
+    top: 42%;
   }
 
   @media (min-width: 1536px) {
-    right: 0px;
+    right: -79px;
   }
 }
 
@@ -88,20 +86,17 @@
   position: absolute;
   left: 0px;
   bottom: 0px;
-  transform: translateY(calc(50% - 10px)) rotate(180deg);
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1;
 
   @media (min-width: 1024px) {
-    bottom: unset;
-    left: 10.5%;
-    top: 40%;
-    bottom: unset;
-    transform: rotate(180deg);
+    transform: translateY(-50%);
+    left: 83px;
+    top: 42%;
   }
 
   @media (min-width: 1536px) {
-    left: 0px;
+    left: -79px;
   }
 }
 
@@ -134,4 +129,12 @@
 .slick-track {
   display: flex;
   align-items: flex-end;
+}
+
+.slider-arrows-shadow {
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.15));
+}
+
+.markdown_paragraph:not(:first-child) {
+  margin-top: 20px;
 }

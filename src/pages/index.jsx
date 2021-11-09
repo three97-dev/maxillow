@@ -3,9 +3,8 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SectionFooter from "./../components/sectionFooter";
 import { HeroSection, Service, Slider } from "../containers/homePage";
-//
+
 import "../css/custom_forms_styles.scss";
-import homeBgPattern from "../images/homeBgPattern.svg";
 import Testimonials from "./../images/testimonails.png";
 
 const IndexPage = ({ data }) => {
@@ -16,12 +15,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <div
-        style={{
-          backgroundImage: `url(${homeBgPattern})`,
-          backgroundRepeat: "repeat",
-        }}
-      >
+      <div className="home-page-background">
         <HeroSection
           data={heroData}
           doctors={doctors.sort((a, b) => {
@@ -35,7 +29,7 @@ const IndexPage = ({ data }) => {
               return 0;
             }
           })}
-          sections={sectionsData.map((sec) => sec.node.title)}
+          sections={sectionsData.map(sec => sec.node.title)}
         />
         {sectionsData.map((v, i) => {
           return (
@@ -55,7 +49,7 @@ const IndexPage = ({ data }) => {
               }}
               footer2={i % 2 !== 0}
               addBlob={i === 0}
-              orangeDots={i === 1}
+              orangeDots={i}
               blueDots={i === 2}
             />
           );

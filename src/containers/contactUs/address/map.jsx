@@ -10,8 +10,9 @@ const Map = ({ link }) => {
           height="100%"
           style={{
             height: "100%",
-            minHeight: "600px",
+            minHeight: "409px",
             minWidth: "300px",
+            borderRadius: "10px",
           }}
           src={link}
           frameborder="0"
@@ -32,6 +33,7 @@ const Map = ({ link }) => {
             height: "100%",
             minHeight: "300px",
             minWidth: "300px",
+            borderRadius: "10px",
           }}
           src={link}
           frameborder="0"

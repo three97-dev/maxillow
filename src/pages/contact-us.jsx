@@ -1,19 +1,24 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import { Contact, Address } from "./../containers/contactUs"
-import Layout from "../components/Layout"
-import SectionFooter from "./../components/sectionFooter"
+import * as React from "react";
+import { graphql } from "gatsby";
+import { Contact, Address } from "./../containers/contactUs";
+import Layout from "../components/Layout";
+import SectionFooter from "./../components/sectionFooter";
 
 const IndexPage = ({ data }) => {
-  const addressData = data.allContentfulAddressLocationsJsonNode
+  const addressData = data.allContentfulAddressLocationsJsonNode;
 
-  const { mapOneLink, mapTwoLink } = data.allContentfulAddress.edges[0].node
+  const { title, contactPhoneNumber, contactFaxNumber, text, mapOneLink, mapTwoLink } =
+    data.allContentfulAddress.edges[0].node;
 
   return (
     <Layout>
       <Contact />
       <Address
         data={addressData}
+        title={title}
+        phone={contactPhoneNumber}
+        fax={contactFaxNumber}
+        text={text.text}
         mapOneLink={mapOneLink.mapOneLink}
         mapTwoLink={mapTwoLink.mapTwoLink}
       />
@@ -27,14 +32,20 @@ const IndexPage = ({ data }) => {
         }}
       />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
     allContentfulAddress {
       edges {
         node {
+          title
+          contactPhoneNumber
+          contactFaxNumber
+          text {
+            text
+          }
           mapOneLink {
             mapOneLink
           }
@@ -51,11 +62,10 @@ export const query = graphql`
           address
           address2
           address3
-          contact
         }
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

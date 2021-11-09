@@ -16,6 +16,7 @@ module.exports = {
         primary: "#EB6024",
         lightGreenBlue: "#D9F4F6",
         lightlightGreenBlue: "#eef7f9",
+        lighttBlue: "#57cdd8",
         secondary: {
           DEFAULT: "#2FC0CC",
           2: "#5765CE",

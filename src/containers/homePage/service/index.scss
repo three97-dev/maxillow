@@ -58,38 +58,15 @@
 }
 
 .orange-pattern {
-  position: absolute;
-  top: 0px;
-  // height: 400px;
-  height: 100%;
-  left: 28px;
-  display: none;
-
-  @media (min-width: 1024px) {
-    display: block;
-  }
-
-  @media (min-width: 1560px) {
-    // left: -110px;
-    // height: 520px;
-  }
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.blue-pattern {
-  position: absolute;
-  // transform-origin: top center;
-  transform: translateX(-50%) rotate(-90deg);
-  height: 250px;
-  left: 0;
-  top: 85px;
-  display: none;
 
-  @media (min-width: 1024px) {
-    display: block;
-  }
+.markdown_paragraph:not(:first-child) {
+  margin-top: 20px;
+}
 
-  @media (min-width: 1560px) {
-    transform: translate(-140px, 100px) rotate(-90deg);
-    height: 220px;
-  }
+.home-service-image-shadow {
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.16));
 }

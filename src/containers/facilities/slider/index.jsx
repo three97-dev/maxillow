@@ -72,8 +72,8 @@ const SliderWrapper = ({ lightBoxImages }) => {
   }, [slider]);
 
   return (
-    <div className="relative pb-[127px] 3xl:max-w-[1536px] 3xl:mx-auto 3xl:px-0">
-      <div className="hidden md:block pt-[100px] px-20 lg:px-[10.5%]">
+    <div className="relative pb-[127px] 3xl:px-0">
+      <div className="hidden md:block px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] pt-[100px]">
         <h1 className="text-center">A State-of-the-Art Institution</h1>
         <p className="mt-[50px]">
           We are pleased to welcome you to Winnipeg’s newest oral and
@@ -98,7 +98,7 @@ const SliderWrapper = ({ lightBoxImages }) => {
         {lightBoxImages.map(({ file: { url } }, i) => (
           <div
             key={i}
-            className="px-[30px] pt-[50px] pb-[50px] w-full h-[330px] sm:h-[500px] md:h-[672px] 2xl:h-[828px] md:px-20 lg:px-[10.5%] 3xl:pb-20 3xl:px-0 3xl:max-w-[1536px] 3xl:mx-auto"
+            className="pt-[50px] pb-[50px] w-full h-[330px] sm:h-[500px] md:h-[672px] 2xl:h-[860px] 3xl:h-[1060px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] 3xl:pb-20"
           >
             <div className="w-full h-full slide-shadow bg-white p-[25px] rounded-[10px]">
               <div className="w-full h-full rounded-[10px]">

@@ -27,6 +27,12 @@
       display: block;
     }
   }
+  .header-shadow {
+    @media (min-width: 1024px) {
+      -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
 
   .nav {
     @media (max-width: 1023px) {

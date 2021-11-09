@@ -8,13 +8,13 @@ import patternBlue from "../../../images/pattern-blue.svg";
 function Doctor2({ title, description, src, quote, doctor }) {
   return (
     <div className="relative mt-[75px] lg:mt-[100px]">
-      <div className="2xl:max-w-[1236px] mx-auto flex flex-col relative px-[30px] md:px-20 mb-[50px] md:mb-20 lg:px-0 lg:mb-0 doctor">
-        <div className="flex flex-col items-end space-y-[50px] lg:z-20 lg:items-stretch lg:space-x-[35px] lg:space-y-0 lg:flex-row lg:pr-[10.5%]">
+      <div className=" mx-auto flex flex-col relative px-[30px] md:px-[81px] lg:px-[100px] xl:px-[142px] 2xl:px-[140px] mb-[50px] md:mb-20 lg:mb-0 doctor">
+        <div className="flex flex-col items-end space-y-[50px] lg:z-20 lg:items-stretch lg:space-y-0 lg:flex-row ">
           <div className="w-full relative flex top-[13px] lg:flex-1">
             <img src={pattern} className="pattern-1 z-10" alt="" />
             <img
               src={src}
-              className="mx-auto w-full md:max-w-[540px] lg:w-[440px] xl:w-[500px] lg:z-30 rounded-xl"
+              className="mx-auto w-full h-auto md:max-w-[540px] lg:w-[440px] xl:w-[500px] lg:z-30 rounded-xl"
               alt="doctor"
             />
           </div>

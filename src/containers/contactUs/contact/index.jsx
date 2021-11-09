@@ -5,75 +5,75 @@ import "./index.scss";
 
 function ContactForm(props) {
   return (
-    <div className="bg-secondary global-x-spacing">
-      <div className="py-14 md:pt-8 md:pb-8 lg:pt-24 lg:pb-20">
+    <div className="bg-secondary contuct-us-shadow px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
+      <div className="pt-[50px] md:pt-[75px] lg:pt-[115px] 2xl:pt-[260px] pb-[64px] md:pb-[0px] lg:pb-[25px] 2xl:pb-[130px]">
         <div className="flex flex-col lg:flex-row justify-center">
           <div className="flex-1">
-            <div className="text-center lg:text-right mx-6 md:mx-12 lg:mx-0 lg:pr-6 xl:pr-16 pb-6 lg:pb-40 border-white lg:border-r">
+            <div className="text-center lg:text-right mx-6 md:mx-12 lg:mx-0 lg:mt-[15px] lg:mr-[44px] 2xl:mr-[67px] lg:mb-[60px] lg:pr-[56px] 2xl:pr-[77px] pb-[15px] md:pb-[30px] lg:pb-[50px] border-white lg:border-r">
               <h1 className="text-white mb-4">Contact Us</h1>
-              <p className="text-white w-10/12 lg:w-full  mx-auto">
+              <p className="text-white w-[90%] lg:w-full mx-auto">
                 If you have any questions about our facility or procedures,
                 please get in touch. We look forward to keeping you smiling!
               </p>
             </div>
-            <div className="hidden justify-end contact-hero-image lg:block">
+            <div className="hidden lg:block justify-end contact-hero-image">
               <img src={PhoneImage} alt="" />
             </div>
           </div>
-          <div className="lg:pl-6 xl:pl-16 flex-2 text-center">
+          <div className="lg:pl-[10px] flex-2 text-center">
             <div className="lg:flex">
-              <div className="flex-1 m-2">
+              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px]">
                 <input
-                  placeholder="First Name"
+                  placeholder="First name"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
-              <div className="flex-1 m-2">
+              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px] lg:ml-[20px]">
                 <input
-                  placeholder="Last Name"
+                  placeholder="Last name"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
             </div>
 
             <div className="lg:flex">
-              <div className="flex-1 m-2">
+              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px]">
                 <input
                   placeholder="Email Address"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
-              <div className="flex-1 m-2">
+              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px] lg:ml-[20px]">
                 <input
-                  placeholder="Phone Number"
+                  placeholder="Phone number"
                   type="text"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
             </div>
 
             <div className="flex">
-              <div className="flex-1 m-2">
+              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px]">
                 <textarea
                   placeholder="Message"
-                  className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
-                  rows={6}
+                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
+                  rows={7}
                 ></textarea>
               </div>
             </div>
 
-            <div className="flex mt-3 lg:mt-16">
-              <div className="flex-1 m-2">
-                <button className="uppercase bg-transparent text-white border-2 border-white rounded-3xl py-2 px-10 hover:bg-white hover:text-secondary">
+            <div className="flex mt-[10px] lg:mt-[30px] 2xl:mt-[83px]">
+              <div className="flex-1 mt-[15px] md:mt-[35px]">
+                <button className="uppercase bg-transparent text-white text-[14px] leading-[18px] border-2 border-white rounded-3xl py-[9px] px-[53px] lg:px-[57px] 2xl:px-[102px] hover:bg-white hover:text-secondary">
                   Submit
                 </button>
               </div>
             </div>
             <div className="hidden sm:block lg:hidden">
-              <div className="flex justify-end mt-8">
+              <div className="flex justify-end mt-[66px] mr-[-10px]">
                 <img src={PhoneImage} className="w-9/12" alt="" />
               </div>
             </div>

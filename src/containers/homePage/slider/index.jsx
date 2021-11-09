@@ -6,7 +6,7 @@ function SliderSection(props) {
 
   return (
     <div
-      className="2xl:px-0 home-slider-main-container pt-[50px]"
+      className="2xl:px-0 home-slider-main-container sm:pt-[50px] xl:pt-[100px]"
       id="home-testimonials"
     >
       <div className="relative 2xl:max-w-[1236px] mx-auto">

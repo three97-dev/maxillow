@@ -1,11 +1,11 @@
-import React from "react"
-import RRenderer from "../../../components/richtextRenderer"
+import React from "react";
+import RRenderer from "../../../components/richtextRenderer";
 
 function Service({ title, description, noBottomBorder, first }) {
   return (
     <div id={first && "main-content"}>
-      <div className="container mx-auto max-w-5xl md:py-4 w-full md:w-1/2 lg:w-full">
-        <div className="global-x-spacing text-2xl flex-2 abosulte pt-8 sm:pt-12 md:pt-16 md:pb-20">
+      <div className="container mx-auto md:py-4 w-full lg:w-full">
+        <div className="text-2xl flex-2 abosulte pt-8 sm:pt-12 md:pt-16 md:pb-20">
           <h1 className="text-center mt-3 mb-6 text-gray-700">{title}</h1>
           <RRenderer
             data={description}
@@ -22,7 +22,7 @@ function Service({ title, description, noBottomBorder, first }) {
         />
       </div>
     </div>
-  )
+  );
 }
 
-export default Service
+export default Service;

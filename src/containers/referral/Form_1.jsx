@@ -2,7 +2,7 @@ import React from "react";
 import Dropdown from "./Dropdown";
 const Form_1 = () => {
   return (
-    <div className=" p-8 pt-20 md:px-30 xl:px-60">
+    <div className="p-8 pt-20 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
       <h1>Referral Information</h1>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="my-4 md:w-[49%]">

@@ -1,23 +1,23 @@
-const { useState, useEffect } = require("react")
+const { useState, useEffect } = require("react");
 
 export function useWindowSize(imgRef = null) {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
-  })
+  });
 
   useEffect(() => {
     function handleResize() {
-      if(imgRef && imgRef.current && imgRef.current.clientWidth>0){
+      if (imgRef && imgRef.current && imgRef.current.clientWidth > 0) {
         setWindowSize({
           width: imgRef.current.clientWidth,
           height: imgRef.current.clientHeight,
-        })
+        });
       } else {
         setWindowSize({
           width: window.innerWidth,
           height: window.innerHeight,
-        })
+        });
       }
     }
 
@@ -26,12 +26,21 @@ export function useWindowSize(imgRef = null) {
 
     return () => window.removeEventListener("resize", handleResize);
     /* eslint-disable-next-line */
-  }, [])
-  return windowSize
+  }, []);
+  return windowSize;
 }
+
 export function getSrcSet(src, width) {
-  const ratioArry = [1, 1.5, 2, 3]
-  let srcSet = ""
-  ratioArry.forEach(ratio => srcSet += `${src}?w=${width * ratio} ${ratio}x, `)
-  return srcSet
+  const ratioArry = [1, 1.5, 2, 3];
+  let srcSet = "";
+  ratioArry.forEach(
+    ratio => (srcSet += `${src}?w=${width * ratio} ${ratio}x, `)
+  );
+  return srcSet;
+}
+
+export function useApplyAfterWidth(width) {
+  const sizes = useWindowSize();
+
+  return sizes.width && sizes.width > width;
 }

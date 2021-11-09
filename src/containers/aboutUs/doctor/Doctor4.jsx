@@ -7,8 +7,8 @@ import pattern from "../../../images/pattern.svg";
 function Doctor2({ title, description, src, quote, doctor }) {
   return (
     <div className="relative mt-[75px] lg:mt-[100px]">
-      <div className="2xl:max-w-[1236px] mx-auto flex flex-col relative px-[30px] md:px-20 mb-[50px] md:mb-20 lg:px-0 lg:mb-0 doctor">
-        <div className="flex flex-col items-end space-y-[50px] lg:z-20 lg:items-end lg:space-y-0 lg:flex-row lg:pr-[7.5%] 2xl:pr-[5%]">
+      <div className="mx-auto flex flex-col relative px-[30px] md:px-[81px] lg:px-[100px] xl:px-[142px] 2xl:px-[140px] mb-[50px] md:mb-20 lg:mb-0 doctor">
+        <div className="flex flex-col items-end space-y-[50px] lg:z-20 lg:items-end lg:space-y-0 lg:flex-row">
           <div className="w-full relative flex top-[13px] lg:flex-1">
             <img
               src={pattern}

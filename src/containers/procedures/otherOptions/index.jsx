@@ -6,7 +6,7 @@ const OtherOptions = ({ data }) => {
 
   return (
     <div className="bg-lightGreenBlue py-12 lg:py-24 global-x-spacing">
-      <div className="w-full md:w-1/2 lg:w-full mx-auto max-w-5xl ">
+      <div className="w-full lg:w-full mx-auto">
         <h1 className="mb-5 text-center">{footerTitle}</h1>
         <div>
           <RRenderer

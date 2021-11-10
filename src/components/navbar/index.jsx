@@ -67,7 +67,7 @@ const Header = () => {
               to="/referral"
             >
               <div className="item flex items-center">
-                <span className="text-sm">MAKE A REFFERRAL</span>
+                <span className="text-sm">MAKE A REFERRAL</span>
               </div>
             </Link>
           </nav>

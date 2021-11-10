@@ -6,7 +6,7 @@ import "./index.scss";
 function ContactForm(props) {
   return (
     <div className="bg-secondary contuct-us-shadow px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
-      <div className="pt-[50px] md:pt-[75px] lg:pt-[115px] 2xl:pt-[260px] pb-[64px] md:pb-[0px] lg:pb-[25px] 2xl:pb-[130px]">
+      <div className="pt-[50px] md:pt-[75px] lg:pt-[115px] 2xl:pt-[260px] pb-[64px] md:pb-[0px] lg:pb-[25px] 2xl:pb-[175px]">
         <div className="flex flex-col lg:flex-row justify-center">
           <div className="flex-1">
             <div className="text-center lg:text-right mx-6 md:mx-12 lg:mx-0 lg:mt-[15px] lg:mr-[44px] 2xl:mr-[67px] lg:mb-[60px] lg:pr-[56px] 2xl:pr-[77px] pb-[15px] md:pb-[30px] lg:pb-[50px] border-white lg:border-r">
@@ -22,44 +22,44 @@ function ContactForm(props) {
           </div>
           <div className="lg:pl-[10px] flex-2 text-center">
             <div className="lg:flex">
-              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px]">
+              <div className="flex-1 mt-[15px] md:ml-[85px] md:mr-[85px] lg:mx-[0px]">
                 <input
                   placeholder="First name"
                   type="text"
-                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full px-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
-              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px] lg:ml-[20px]">
+              <div className="flex-1 mt-[15px] md:ml-[85px] md:mr-[85px] lg:mx-[0px] lg:ml-[20px]">
                 <input
                   placeholder="Last name"
                   type="text"
-                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full px-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
             </div>
 
             <div className="lg:flex">
-              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px]">
+              <div className="flex-1 mt-[15px] md:ml-[85px] md:mr-[85px] lg:mx-[0px]">
                 <input
                   placeholder="Email Address"
                   type="text"
-                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full px-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
-              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px] lg:ml-[20px]">
+              <div className="flex-1 mt-[15px] md:ml-[85px] md:mr-[85px] lg:mx-[0px] lg:ml-[20px]">
                 <input
                   placeholder="Phone number"
                   type="text"
-                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full px-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                 />
               </div>
             </div>
 
             <div className="flex">
-              <div className="flex-1 mt-[15px] md:mx-[78px] lg:mx-[0px]">
+              <div className="flex-1 mt-[15px] md:ml-[85px] md:mr-[85px] lg:mx-[0px]">
                 <textarea
                   placeholder="Message"
-                  className="w-full pl-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
+                  className="w-full px-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                   rows={7}
                 ></textarea>
               </div>
@@ -73,8 +73,8 @@ function ContactForm(props) {
               </div>
             </div>
             <div className="hidden sm:block lg:hidden">
-              <div className="flex justify-end mt-[66px] mr-[-10px]">
-                <img src={PhoneImage} className="w-9/12" alt="" />
+              <div className="flex justify-end mt-[66px] mr-[1px]">
+                <img src={PhoneImage} className="w-[73%]" alt="" />
               </div>
             </div>
           </div>

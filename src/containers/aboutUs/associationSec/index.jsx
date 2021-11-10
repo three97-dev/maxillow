@@ -11,7 +11,7 @@ function Service(props) {
       <div className="flex flex-col max-w-3xl m-auto items-center">
         <div className="w-sm flex-1">
           <h2 className="text-center">{data.title}</h2>
-          <p className="mt-9 text-center max-w-[400px] lg:text-base">
+          <p className="mt-9 text-center max-w-[400px]">
             {data.description}
           </p>
         </div>

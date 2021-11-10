@@ -9,11 +9,11 @@
 }
 
 .bg-about-container {
-  background-image: linear-gradient(180deg, #eb6024 90%, white 90%);
+  background-image: linear-gradient(180deg, #eb6024 90%, transparent 90%);
 
   @media (min-width: 1024px) {
     background-image: url("../../../images/pattern5.png"),
-      linear-gradient(180deg, #eb6024 78%, white 78%);
+      linear-gradient(180deg, #eb6024 78%, transparent 78%);
     background-position: left center;
   }
 }

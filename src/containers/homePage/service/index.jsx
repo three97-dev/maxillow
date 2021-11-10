@@ -145,7 +145,7 @@ function Service({ footer2, addBlob, orangeDots, blueDots, ...props }) {
                 config={{
                   p: `markdown_paragraph lg:max-w-[711px] 2xl:max-w-[812px] ${
                     props.isCentered ? "lg:mx-auto" : ""
-                  } text-[14px] md:text-[16px] lg:text-[20px] 2xl:text-[24px] leading-[22px] md:leading-[22px] lg:leading-[30px]`,
+                  }`,
                 }}
               />
 

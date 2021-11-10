@@ -4,13 +4,13 @@ import RRenderer from "../../../components/richtextRenderer";
 function Service({ title, description, noBottomBorder, first }) {
   return (
     <div id={first && "main-content"}>
-      <div className="container mx-auto md:py-4 w-full lg:w-full">
+      <div className="mx-auto md:py-4 w-full lg:w-full">
         <div className="text-2xl flex-2 abosulte pt-8 sm:pt-12 md:pt-16 md:pb-20">
           <h1 className="text-center mt-3 mb-6 text-gray-700">{title}</h1>
           <RRenderer
             data={description}
             config={{
-              p: "text-sm mb-6",
+              p: "mb-6",
               h4: "mb-3",
             }}
           />

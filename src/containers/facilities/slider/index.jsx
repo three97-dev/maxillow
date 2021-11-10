@@ -1,79 +1,25 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "./index.scss";
 import { RightArrow } from "../../../components/icons";
+import { useApplyAfterWidth } from "../../../hooks/getWidth";
 
-import Img1 from "../../../images/gallery/img1.png";
-import Img2 from "../../../images/gallery/img2.png";
-import Img3 from "../../../images/gallery/img3.png";
-import Img4 from "../../../images/gallery/img4.png";
-
-let imgs = [];
-let goToslideHandler = null;
-
-const Pagination = (props) => {
-  return <button className="button-pagination" {...props}></button>;
-};
-
-const ArrowRight = ({ onClick, currentSlide, ...props }) => {
+const ArrowButton = ({ onClick, arrowClass }) => {
+  const isDesktop = useApplyAfterWidth(1023);
   return (
-    <div>
-      <div className="hidden md:grid grid-cols-2 gap-4 px-[30px] mb-[50px] lg:grid-cols-5 md:px-20 lg:px-[10.5%] 3xl:max-w-[1536px] mx-auto 3xl:px-0">
-        {imgs.map(({ file: { url } }, i) => (
-          <div
-            className={`"rounded-[10px] max-h-[328px] transition-all rounded-[10px]  overflow-hidden cursor-pointer ${
-              currentSlide === i ? "p-0 shadow-3xl m-0" : "p-4 m-0"
-            }"`}
-            onClick={() => goToslideHandler(i)}
-            key={i}
-          >
-            <img
-              src={url}
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-        ))}
-      </div>
-      <button className="slider-right-arrow" onClick={onClick}>
-        <div>
-          <RightArrow size={50} color="#2FC0CC" />
-        </div>
-      </button>
-    </div>
-  );
-};
-
-const ArrowLeft = ({ onClick }) => {
-  return (
-    <button onClick={onClick} className="slider-left-arrow">
-      <div>
-        <RightArrow size={50} color="#2FC0CC" />
-      </div>
+    <button onClick={onClick} className={`${arrowClass} z-10`}>
+      <RightArrow size={isDesktop ? 60 : 37} color="#5EBDCA" />
     </button>
   );
 };
 
 const SliderWrapper = ({ lightBoxImages }) => {
-  imgs = lightBoxImages;
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dotsClass: "slider-dots",
-  };
-
-  const slider = useRef(null);
-  useEffect(() => {
-    if (slider.current) {
-      goToslideHandler = slider.current.slickGoTo;
-    }
-  }, [slider]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  let goToSlider;
 
   return (
-    <div className="relative pb-[127px] 3xl:px-0">
-      <div className="hidden md:block px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] pt-[100px]">
+    <div className="relative pb-[80px] lg:pb-0 3xl:max-w-full 3xl:mx-auto 3xl:px-0">
+      <div className="hidden md:block pt-[100px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
         <h1 className="text-center">A State-of-the-Art Institution</h1>
         <p className="mt-[50px]">
           We are pleased to welcome you to Winnipeg’s newest oral and
@@ -89,28 +35,45 @@ const SliderWrapper = ({ lightBoxImages }) => {
       </div>
 
       <Slider
-        {...settings}
-        customPaging={Pagination}
-        nextArrow={<ArrowRight />}
-        prevArrow={<ArrowLeft />}
-        ref={slider}
+        prevArrow={<ArrowButton arrowClass="slider-left-arrow" />}
+        nextArrow={<ArrowButton arrowClass="slider-right-arrow" />}
+        ref={slider => (goToSlider = slider)}
+        infinite={false}
+        speed={500}
+        slidesToShow={1}
+        slidesToScroll={1}
+        beforeChange={(current, newSlide) => setCurrentSlide(newSlide)}
+        className="2xl:px-[140px] mx-auto"
       >
         {lightBoxImages.map(({ file: { url } }, i) => (
-          <div
-            key={i}
-            className="pt-[50px] pb-[50px] w-full h-[330px] sm:h-[500px] md:h-[672px] 2xl:h-[860px] 3xl:h-[1060px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] 3xl:pb-20"
-          >
-            <div className="w-full h-full slide-shadow bg-white p-[25px] rounded-[10px]">
-              <div className="w-full h-full rounded-[10px]">
-                <img
-                  src={url}
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
+          <div key={i} className="pt-[50px] pb-[25px]">
+            <div className="max-w-[700px] md:w-[500px] 2xl:w-[905px] xl:max-w-[905px] max-h-[475px] md:h-[300px] 2xl:h-[575px] xl:max-h-[575px] slide-shadow bg-[#FFF8F8] p-[12px] lg:p-[25px] rounded-[10px] sm:mx-auto mx-[30px]">
+              <img
+                src={url}
+                className="w-full h-full object-cover object-center rounded-[10px]"
+                style={{ border: "1px solid #707070" }}
+              />
             </div>
           </div>
         ))}
       </Slider>
+
+      <div className="hidden lg:flex justify-center mb-[50px] h-[170px]">
+        {lightBoxImages.map(({ file: { url } }, i) => (
+          <div
+            className={`rounded-[10px] my-auto h-[100px] w-[150px] transition-all mx-[25px] overflow-hidden cursor-pointer ${
+              currentSlide === i ? "h-[120px] w-[170px] shadow-3xl m-0" : "m-0"
+            }`}
+            onClick={() => goToSlider.slickGoTo(i)}
+            key={i}
+          >
+            <img
+              src={url}
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

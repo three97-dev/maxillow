@@ -16,7 +16,7 @@ const Slide = ({ author, content }) => {
           <RRenderer
             data={content}
             config={{
-              p: "markdown_paragraph leading-[22px] md:text-base lg:text-xl",
+              p: "markdown_paragraph testimonials-font",
             }}
           />
         </div>

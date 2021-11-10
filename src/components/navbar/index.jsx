@@ -62,12 +62,12 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              className="block lg:inline-block text-secondary drop-shadow-lg header-shadow rounded-xl cursor-pointer transition duration-300 lg:ml-[25px] xl:ml-[50px] 2xl:ml-[75px] p-[12px] py-4 lg:hover:bg-lighttBlue lg:bg-secondary lg:text-white"
+              className="block lg:inline-block text-secondary drop-shadow-lg header-shadow rounded-xl cursor-pointer transition duration-300 lg:ml-[25px] xl:ml-[50px] 2xl:ml-[75px] p-[12px] py-4 lg:hover:bg-lightBlue lg:bg-secondary lg:text-white"
               partiallyActive={true}
               to="/referral"
             >
               <div className="item flex items-center">
-                <span className="text-sm">MAKE A REFERRAL</span>
+                <span className="text-sm">MAKE A REFFERRAL</span>
               </div>
             </Link>
           </nav>

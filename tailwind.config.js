@@ -16,7 +16,7 @@ module.exports = {
         primary: "#EB6024",
         lightGreenBlue: "#D9F4F6",
         lightlightGreenBlue: "#eef7f9",
-        lighttBlue: "#57cdd8",
+        lightBlue: "#57cdd8",
         secondary: {
           DEFAULT: "#2FC0CC",
           2: "#5765CE",
@@ -48,7 +48,6 @@ module.exports = {
       "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       inner: "inset 0 0 10px #b9b5b5",
-    
 
       none: "none",
     },

@@ -10,7 +10,7 @@ function SectionFooter({ footerBg, data = {} }) {
 
   return (
     <div
-      className={`flex ${footerBg} relative h-[111px] sm:h-[151px] 2xl:h-[200px] px-[30px] sm:px-[81px] lg:px-[139px]`}
+      className={`flex ${footerBg} relative h-[111px] sm:h-[151px] 2xl:h-[200px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]`}
     >
       <div className="mx-auto my-auto z-20 w-full">
         <div className="flex justify-between">

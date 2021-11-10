@@ -9,8 +9,8 @@ const Service = (props) => {
   const imgSize = useWindowSize(imgRef);
 
   return (
-    <div className="flex-1">
-      <div className="lg:mx-0 lg:h-[500px] lg:overflow-y-auto xl:h-[380px] 2xl:h-[360px] 3xl:h-[290px]">
+    <div className="flex flex-col justify-end flex-1">
+      <div className="lg:mx-0 mb-auto">
         <h3 className="mb-[50px]">{props.title}</h3>
         <RRenderer
           data={props.description}

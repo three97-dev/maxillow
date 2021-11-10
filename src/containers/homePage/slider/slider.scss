@@ -29,34 +29,22 @@
 }
 
 .home-slider-container {
-  height: 642px;
+  height: 450px;
 
   @media (min-width: 450px) {
-    height: 540px;
-  }
-
-  @media (min-width: 550px) {
-    height: 430px;
-  }
-
-  @media (min-width: 650px) {
     height: 380px;
   }
 
-  @media (min-width: 830px) {
-    height: 420px;
+  @media (min-width: 550px) {
+    height: 330px;
   }
 
-  @media (min-width: 1024px) {
-    height: 600px;
+  @media (min-width: 1080px) {
+    height: 380px;
   }
 
   @media (min-width: 1280px) {
-    height: 480px;
-  }
-
-  @media (min-width: 1536px) {
-    height: 470px;
+    height: 330px;
   }
 }
 
@@ -137,4 +125,14 @@
 
 .markdown_paragraph:not(:first-child) {
   margin-top: 20px;
+}
+
+.testimonials-font {
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: 1080px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

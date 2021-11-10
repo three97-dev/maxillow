@@ -48,7 +48,7 @@ function HeroSection({
               <h1 className="uppercase mb-3 text-white text-[34px] leading-[36px] lg:font-extrabold 3xl:mb-[15px]">
                 {mainHeading}
               </h1>
-              <p className="text-white mb-[50px] leading-[22px] md:mb-[100px] lg:mb-11 3xl:mb-[54px]">
+              <p className="text-white mb-[50px] md:mb-[100px] lg:mb-11 3xl:mb-[54px]">
                 {shortDescription}
               </p>
               <div className="text-center hidden lg:block">

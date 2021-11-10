@@ -15,13 +15,13 @@ const AboutUsIntroSection = ({ data, ...props }) => {
 
   return (
     <div
-      className=" mx-auto px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] pt-[50px] px-[30px] md:pt-[75px] lg:pt-[50px]"
+      className=" mx-auto px-[30px] md:px-[81px] xl:px-[140px] pt-[50px] md:pt-[75px] lg:pt-[50px]"
       id="main-content"
     >
       <div>
         <div className="flex flex-col lg:flex-row w-full lg:w-full mx-auto mb-[34px] lg:space-x-[50px] lg:mb-0">
           <div className="lg:flex relative lg:flex-col lg:justify-between lg:max-w-[300px] xl:max-w-[400px]">
-            <div className="hidden lg:block absolute w-[1px] h-[55%] bg-[#7AD0DD] top-5 right-3" />
+            <div className="hidden lg:block absolute w-[1px] h-[55%] bg-[#7AD0DD] top-5 right-0 xl:right-3" />
             <h2 className="text-center lg:text-left mb-[50px]">{title}</h2>
             <div className="hidden md:block w-full pl-16 pr-6 pt-6 mb-[100px] lg:w-auto lg:m-0 lg:p-0">
               <img src={image.file.url} alt="teeth" />
@@ -31,7 +31,7 @@ const AboutUsIntroSection = ({ data, ...props }) => {
             <RRenderer
               data={description}
               config={{
-                p: "mb-4 md:text-xl lg:text-lg xl:text-xl",
+                p: "mb-4",
               }}
             />
             <div

@@ -17,6 +17,7 @@ const SubProcedure = ({ data }) => {
     <Layout>
       <HeroSection
         backgroundColor="bgSecondary"
+        backgroundClass="bg-about-container lg:mb-[-35px] xl:mb-[-60px]"
         miniHeading="Procedures"
         data={{
           edges: [

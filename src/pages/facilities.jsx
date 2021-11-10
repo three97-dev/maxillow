@@ -6,6 +6,7 @@ import { HeroSection } from "../containers/aboutUs";
 import Section from "../containers/facilities/section";
 import FacilitiesContainer from "../containers/facilities";
 import Slider from "../containers/facilities/slider";
+import patternOrange from "../images/pattern.svg";
 
 const Facilities = ({ data }) => {
   const facilitiesHeroData = data.allContentfulHeroFacilities;
@@ -46,7 +47,14 @@ const Facilities = ({ data }) => {
         </div>
       </FacilitiesContainer>
 
-      <Slider lightBoxImages={lightBoxImages} />
+      <div className="relative">
+        <img
+          src={patternOrange}
+          className="absolute hidden lg:block left-[-72px] top-[350px] w-[110px] h-[240px]"
+        />
+        <Slider lightBoxImages={lightBoxImages} />
+      </div>
+
       <SectionFooter
         data={{
           title: "Contact",

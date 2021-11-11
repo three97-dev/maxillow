@@ -55,7 +55,7 @@ function ContactForm(props) {
                   <input
                     name="Phone number"
                     placeholder="Phone number"
-                    type="text"
+                    type="number"
                     className="w-full px-[20px] py-[14px] text-[16px] leading-[22px] rounded-lg outline-none border-none shadow-inner insetShadow"
                   />
                 </div>

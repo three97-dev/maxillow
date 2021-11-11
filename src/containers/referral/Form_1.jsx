@@ -42,7 +42,7 @@ const Form_1 = () => {
           <input
             name="Referring Doctor Phone"
             placeholder="Referring Doctor Phone"
-            type="text"
+            type="number"
             className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>

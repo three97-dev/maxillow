@@ -25,7 +25,7 @@ const Form_2 = () => {
           <input
             name="phone"
             placeholder="Phone"
-            type="tel"
+            type="number"
             className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
           />
         </div>

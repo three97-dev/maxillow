@@ -23,10 +23,8 @@ const Form_1 = () => {
             placeholder="Location"
             name="Location"
             option={[
-              "Location_01",
-              "Location_02",
-              "Location_03",
-              "Location_04",
+              "Maxillo East - Henderson Hwy",
+              "Maxillo West - Portage Ave",
             ]}
           />
         </div>

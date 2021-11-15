@@ -21,7 +21,7 @@ const Form_2 = () => {
             />
 
             <MyCheckbox
-              label="Tooth Exposur"
+              label="Tooth Exposure"
               name="Primary Concern[]"
               value="Tooth Exposure"
             />

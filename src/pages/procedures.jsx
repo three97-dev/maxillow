@@ -11,7 +11,7 @@ const Procedures = ({ data }) => {
   const heroData = data.allContentfulHeroProcedures;
   const procedures = data.subProcedures;
   const sectionData = data.allContentfulSectionProcedures.edges;
-  const sectionContentData = data.allContentfulSectionPageContent.nodes[0];
+  const sectionContentData = data.allContentfulSectionProceduresPageContent.nodes[0];
 
   return (
     <Layout>

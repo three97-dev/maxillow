@@ -74,7 +74,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulSectionPageContent {
+    allContentfulSectionProceduresPageContent {
       nodes {
         mainHeading
         mainContent {

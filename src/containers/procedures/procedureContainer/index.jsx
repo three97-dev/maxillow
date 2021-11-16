@@ -11,7 +11,7 @@ const ProcedureContainer = ({ children, patternGroupTwo }) => {
     >
       <img
         src={proceduresBgImage}
-        className="absolute hidden xl:inline-block top-[-55px] right-[-98px] xl:top-[-20px] z-[-1] opacity-[0.35]"
+        className="absolute hidden xl:inline-block top-[-55px] right-[-98px] xl:top-[-20px] z-[-1] opacity-[0.15]"
       />
       {children}
     </div>

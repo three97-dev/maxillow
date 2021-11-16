@@ -5,11 +5,13 @@ import SectionFooter from "./../components/sectionFooter";
 import { HeroSection } from "../containers/aboutUs";
 import { ProcedureSec, Section } from "./../containers/procedures";
 import ProcedureContainer from "../containers/procedures/procedureContainer";
+import RRenderer from "../components/richtextRenderer";
 
 const Procedures = ({ data }) => {
   const heroData = data.allContentfulHeroProcedures;
   const procedures = data.subProcedures;
   const sectionData = data.allContentfulSectionProcedures.edges;
+  const sectionContentData = data.allContentfulSectionPageContent.nodes[0];
 
   return (
     <Layout>
@@ -20,18 +22,10 @@ const Procedures = ({ data }) => {
       />
       <ProcedureContainer>
         <ProcedureSec data={procedures} />
-        <h2 className="mt-[50px] text-center">
-          {sectionData[0].node.mainHeading}
+        <h2 className="my-[50px] text-center">
+          {sectionContentData.mainHeading}
         </h2>
-
-        <p className="mt-[50px]">
-          The consultation is an opportunity to meet each other and discuss your
-          surgery. We will review x-rays, medical history and other information
-          relevant to your treatment. We always discuss your anesthetic options
-          (local anesthesia, oral sedation, intravenous sedation or general
-          anesthesia) along with risks/benefits and associated costs.
-        </p>
-
+        <RRenderer data={sectionContentData.mainContent} />
         <div className="my-[100px] flex flex-col space-y-[50px] lg:flex-row lg:space-x-4 lg:space-y-0">
           {sectionData.map((v, i) => {
             return (
@@ -39,7 +33,6 @@ const Procedures = ({ data }) => {
                 key={i}
                 src={v.node.image.file.url}
                 title={v.node.title}
-                mainHeading={v.node.mainHeading}
                 description={v.node.description}
                 footerText={v.node.footerText}
                 inverse={i % 2 !== 0}
@@ -81,12 +74,18 @@ export const query = graphql`
         }
       }
     }
+    allContentfulSectionPageContent {
+      nodes {
+        mainHeading
+        mainContent {
+          raw
+        }
+      }
+    }
     allContentfulSectionProcedures(sort: { fields: createdAt }) {
       edges {
         node {
           title
-          mainHeading
-
           footerText
           description {
             raw

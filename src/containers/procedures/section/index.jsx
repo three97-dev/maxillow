@@ -20,7 +20,7 @@ const Service = (props) => {
         />
       </div>
       <div
-        className={`mt-[50px] p-[25px] procedure-section-bar md:px-20 lg:p-4 lg:h-[150px] xl:h-[120px] 3xl:h-[111px] ${
+        className={`mt-[50px] p-[25px] procedure-section-bar md:px-20 lg:p-4 lg:h-[150px] xl:h-[120px] 3xl:h-[95px] ${
           props.inverse ? "bar-inverse" : ""
         }`}
       >

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "./index.scss";
 import { RightArrow } from "../../../components/icons";
 import { useApplyAfterWidth } from "../../../hooks/getWidth";
+import RRenderer from "../../../components/richtextRenderer";
 
 const ArrowButton = ({ onClick, arrowClass }) => {
   const isDesktop = useApplyAfterWidth(1023);
@@ -13,31 +14,26 @@ const ArrowButton = ({ onClick, arrowClass }) => {
   );
 };
 
-const SliderWrapper = ({ lightBoxImages }) => {
+const SliderWrapper = ({ lightBoxImages, title, content }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   let goToSlider;
 
   return (
     <div className="relative pb-[80px] lg:pb-0 3xl:max-w-full 3xl:mx-auto 3xl:px-0">
       <div className="hidden md:block pt-[100px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
-        <h1 className="text-center">A State-of-the-Art Institution</h1>
-        <p className="mt-[50px]">
-          We are pleased to welcome you to Winnipeg’s newest oral and
-          maxillofacial surgical facilities. Our northeast Winnipeg location is
-          approximately 8 minutes from downtown with easy access from Henderson
-          Highway or Main Street (via the Redwood Bridge). This facility is
-          located in the brand new Henderson Professional Centre located at 755
-          Henderson Highway Suite 303. Our west Winnipeg location is at 2305
-          Portage Avenue (intersection of Portage Ave. and Mount Royal Rd.).
-          Both of our facilities are wheelchair accessible and have free
-          parking.
-        </p>
+        <h1 className="text-center">{title}</h1>
+        <RRenderer
+          data={content}
+          config={{
+            p: "mt-[50px]",
+          }}
+        />
       </div>
 
       <Slider
         prevArrow={<ArrowButton arrowClass="slider-left-arrow" />}
         nextArrow={<ArrowButton arrowClass="slider-right-arrow" />}
-        ref={slider => (goToSlider = slider)}
+        ref={(slider) => (goToSlider = slider)}
         infinite={false}
         speed={500}
         slidesToShow={1}

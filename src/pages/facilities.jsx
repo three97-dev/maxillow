@@ -7,12 +7,14 @@ import Section from "../containers/facilities/section";
 import FacilitiesContainer from "../containers/facilities";
 import Slider from "../containers/facilities/slider";
 import patternOrange from "../images/pattern.svg";
+import RRenderer from "../components/richtextRenderer";
 
 const Facilities = ({ data }) => {
   const facilitiesHeroData = data.allContentfulHeroFacilities;
   const sectionsData = data.allContentfulSectionsFacilities.edges;
   const lightBoxImages =
     data.allContentfulLightboxFacilities.edges[0].node.images;
+  const containerData = data.allContentfulContainerFacilities.nodes[0];
 
   return (
     <Layout>
@@ -21,18 +23,15 @@ const Facilities = ({ data }) => {
         data={facilitiesHeroData}
       />
       <FacilitiesContainer>
-        <h2 className="mt-[100px] text-center">What to Expect</h2>
-        <p className="mt-[50px]">
-          We are pleased to welcome you to Winnipeg’s newest oral and
-          maxillofacial surgical facilities. Our northeast Winnipeg location is
-          approximately 8 minutes from downtown with easy access from Henderson
-          Highway or Main Street (via the Redwood Bridge). This facility is
-          located in the brand new Henderson Professional Centre located at 755
-          Henderson Highway Suite 303. Our west Winnipeg location is at 2305
-          Portage Avenue (intersection of Portage Ave. and Mount Royal Rd.).
-          Both of our facilities are wheelchair accessible and have free
-          parking.
-        </p>
+        <h2 className="mt-[100px] text-center">
+          {containerData.containerTitle}
+        </h2>
+        <RRenderer
+          data={containerData.containerContent}
+          config={{
+            p: "mt-[50px]",
+          }}
+        />
         <div className="flex flex-col space-y-[50px] mt-[50px] lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4">
           {sectionsData.map((v, i) => (
             <Section
@@ -52,7 +51,11 @@ const Facilities = ({ data }) => {
           src={patternOrange}
           className="absolute hidden lg:block left-[-72px] top-[350px] w-[110px] h-[240px]"
         />
-        <Slider lightBoxImages={lightBoxImages} />
+        <Slider
+          lightBoxImages={lightBoxImages}
+          title={containerData.sliderTitle}
+          content={containerData.sliderContent}
+        />
       </div>
 
       <SectionFooter
@@ -80,6 +83,18 @@ export const query = graphql`
             }
           }
           ctaText
+        }
+      }
+    }
+    allContentfulContainerFacilities {
+      nodes {
+        containerTitle
+        containerContent {
+          raw
+        }
+        sliderTitle
+        sliderContent {
+          raw
         }
       }
     }

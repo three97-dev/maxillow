@@ -83,6 +83,10 @@ const Text = ({ data, config }) => {
     },
   };
 
+  if (!data || !data.raw) {
+    return null;
+  }
+
   return <div>{renderRichText(data, options)}</div>;
 };
 

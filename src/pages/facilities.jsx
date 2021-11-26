@@ -86,7 +86,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulContainerFacilities {
+    allContentfulContainerFacilities(filter: {contentful_id: {ne: "2Eji7qMh1rPrF9slHo7hs8"}}) {
       nodes {
         containerTitle
         containerContent {

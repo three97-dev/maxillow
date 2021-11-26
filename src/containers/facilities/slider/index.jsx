@@ -22,12 +22,14 @@ const SliderWrapper = ({ lightBoxImages, title, content }) => {
     <div className="relative pb-[80px] lg:pb-0 3xl:max-w-full 3xl:mx-auto 3xl:px-0">
       <div className="hidden md:block pt-[100px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
         <h1 className="text-center">{title}</h1>
-        <RRenderer
-          data={content}
-          config={{
-            p: "mt-[50px]",
-          }}
-        />
+        <div className="flex justify-center">
+          <RRenderer
+            data={content}
+            config={{
+              p: "mt-[50px]",
+            }}
+          />
+        </div>
       </div>
 
       <Slider
@@ -63,10 +65,7 @@ const SliderWrapper = ({ lightBoxImages, title, content }) => {
             onClick={() => goToSlider.slickGoTo(i)}
             key={i}
           >
-            <img
-              src={url}
-              className="w-full h-full object-cover object-center"
-            />
+            <img src={url} className="w-full h-full object-cover object-center" />
           </div>
         ))}
       </div>

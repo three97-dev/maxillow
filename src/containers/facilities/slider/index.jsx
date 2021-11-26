@@ -20,7 +20,7 @@ const SliderWrapper = ({ lightBoxImages, title, content }) => {
 
   return (
     <div className="relative pb-[80px] lg:pb-0 3xl:max-w-full 3xl:mx-auto 3xl:px-0">
-      <div className="hidden md:block pt-[100px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
+      <div className="pt-[100px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
         <h1 className="text-center">{title}</h1>
         <div className="flex justify-center">
           <RRenderer

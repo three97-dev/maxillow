@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
         data={{
           title: "REFERRAL FORM",
           subTitle: "Download Our",
-          link: "https://assets.ctfassets.net/wtwqjmvr7hi2/749ZWrb9x7zQkziRZtx96e/c9ed0696fc111c7340ac87c798c10ba4/maxillowinnipeg_referralform.pdf",
+          link: "https://assets.ctfassets.net/wtwqjmvr7hi2/749ZWrb9x7zQkziRZtx96e/90e103863a91b7bfdbb58ccf06c2cb92/349896_3_Maxillo_WPG_Referrals_Pads.pdf",
           target: "_blank",
         }}
       />

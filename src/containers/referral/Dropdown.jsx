@@ -21,7 +21,7 @@ const Dropdown_2 = ({ option, placeholder, name }) => {
 
   return (
     <div
-      className="w-full  rounded-lg outline-none border-none shadow-inner overflow-hidden relative"
+      className="dropdown-wrapper w-full rounded-lg outline-none border-none shadow-inner overflow-hidden relative"
       role="dd-wrapper"
     >
       <div
@@ -35,7 +35,7 @@ const Dropdown_2 = ({ option, placeholder, name }) => {
         >
           {header}
         </div>
-        <span className="absolute top-5 right-6 text-[#2fc0cc]">
+        <span className="dropdown-arrow absolute top-5 right-6 text-[#2fc0cc]">
           {active ? <FaChevronUp /> : <FaChevronDown />}
         </span>
       </div>

@@ -1,0 +1,21 @@
+.pdf-view {
+  & input,
+  & .dropdown-wrapper,
+  & .my-checkbox {
+    box-shadow: none !important;
+    border: 1px solid gray !important;
+  }
+
+  & textarea {
+    display: none;
+  }
+
+  & .textarea-div {
+    display: block;
+  }
+
+  & button,
+  & .dropdown-arrow {
+    display: none;
+  }
+}

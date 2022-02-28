@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import MyCheckbox from "./Checkbox";
+
 const Form_4 = () => {
+  const [medicalAlertTextareaValue, setMedicalAlertTextareaValue] = useState("");
+  const [additionalNotesTextareaValue, setAdditionalNotesTextareaValue] = useState("");
+
   return (
     <div className="p-8 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
       <h1>Patient Details</h1>
@@ -66,7 +70,7 @@ const Form_4 = () => {
         </div>
         <div className="mt-4 md:w-[49%]">
           <input
-            name="Location"
+            name="Patient Location"
             placeholder="Location"
             type="text"
             className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow"
@@ -79,8 +83,13 @@ const Form_4 = () => {
           rows="3"
           cols="50"
           placeholder="Medical Alert"
-          className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow mt-7  mt-"
+          value={medicalAlertTextareaValue}
+          onChange={(e) => setMedicalAlertTextareaValue(e.target.value)}
+          className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow mt-7"
         ></textarea>
+        <div className="textarea-div hidden w-full min-h-[114px] p-3 mt-7 rounded-lg border border-[#808080]">
+          {medicalAlertTextareaValue}
+        </div>
       </div>
       <div>
         <textarea
@@ -88,8 +97,13 @@ const Form_4 = () => {
           rows="3"
           cols="50"
           placeholder="Additional Notes"
+          value={additionalNotesTextareaValue}
+          onChange={(e) => setAdditionalNotesTextareaValue(e.target.value)}
           className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow mt-5"
         ></textarea>
+        <div className="textarea-div hidden w-full min-h-[114px] p-3 mt-5 rounded-lg border border-[#808080]">
+          {additionalNotesTextareaValue}
+        </div>
       </div>
       <hr className=" border-t-2 border-secondary  mt-12" />
     </div>

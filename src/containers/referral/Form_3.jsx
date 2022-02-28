@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import DOB from "./DOB";
 
 const Form_2 = () => {
+  const [insuranceInformationTextareaValue, setInsuranceInformationTextareaValue] = useState("");
+
   return (
     <div className="p-8 pt-10 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
       <h1>Patient Information</h1>
@@ -45,8 +47,13 @@ const Form_2 = () => {
           rows="3"
           cols="50"
           placeholder="Insurance Information"
+          value={insuranceInformationTextareaValue}
+          onChange={(e) => setInsuranceInformationTextareaValue(e.target.value)}
           className="w-full p-3 rounded-lg outline-none border-none shadow-inner insetShadow my-3"
         ></textarea>
+        <div className="textarea-div hidden w-full min-h-[114px] p-3 my-3 rounded-lg border border-[#808080]">
+          {insuranceInformationTextareaValue}
+        </div>
       </div>
 
       <hr className=" border-t-2 border-secondary  mt-12" />

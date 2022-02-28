@@ -13,6 +13,7 @@ const MyCheckbox = (props) => {
           "-webkit-box-shadow: ": "inset 0 0 4px #b9b5b5",
           "-moz-box-shadow": "inset 0 0 4px #b9b5b5",
         }}
+        className="my-checkbox"
         labelStyle={{ color: "#2d2d2d", "margin-left": 10 }}
         borderWidth={0}
         size={22}

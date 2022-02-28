@@ -20,6 +20,8 @@
     "gatsby-source-contentful": "^5.9.0",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-sharp": "^3.9.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-custom-checkbox": "^2.0.0",

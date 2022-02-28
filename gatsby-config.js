@@ -5,6 +5,17 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
+};
+
+// If you want to use the preview API please define
+// CONTENTFUL_PREVIEW_ACCESS_TOKEN in your environment config.
+if (process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN) {
+  contentfulConfig.host = "preview.contentful.com";
+  contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
+}
 
 module.exports = {
   siteMetadata: {
@@ -34,10 +45,7 @@ module.exports = {
     },
     {
       resolve: "gatsby-source-contentful",
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
-      },
+      options: contentfulConfig,
     },
     {
       resolve: "gatsby-plugin-sass",

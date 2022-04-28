@@ -21,6 +21,10 @@ const Header = () => {
       path: "/facilities",
     },
     {
+      title: "FORMS",
+      path: "/forms",
+    },
+    {
       title: "CONTACT US",
       path: "/contact-us",
     },

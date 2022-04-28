@@ -11,7 +11,7 @@ const Service = (props) => {
   return (
     <div className="flex flex-col justify-end flex-1">
       <div className="lg:mx-0 mb-auto">
-        <h3 className="mb-[50px]">{props.title}</h3>
+        <h3 className="mb-[50px] font-bold">{props.title}</h3>
         <RRenderer
           data={props.description}
           config={{

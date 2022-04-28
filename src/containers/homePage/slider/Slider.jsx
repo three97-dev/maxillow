@@ -10,9 +10,9 @@ import "./slider.scss";
 
 const Slide = ({ author, content }) => {
   return (
-    <div className="home-slider-container mb-[50px] px-[30px] md:px-20 lg:px-0 lg:max-w-[650px] xl:max-w-[890px] lg:mx-auto">
-      <div className="flex flex-col h-full home-slide-shadow rounded-[10px] bg-white p-[25px] pb-[30px] md:p-[50px] 2xl:px-[90px] 2xl:py-[50px]">
-        <div className="flex-1">
+    <div className="home-slider-container mb-[25px] lg:mb-[31px] px-[14px] md:px-20 lg:px-0 lg:max-w-[650px] xl:max-w-[890px] 2xl:max-w-[1120px] lg:mx-auto">
+      <div className="flex flex-col justify-between h-full home-slide-shadow rounded-[10px] bg-[#F7E2D9] border border-[#5EBDCA] py-[32px] px-[16px] lg:px-[32px]">
+        <div>
           <RRenderer
             data={content}
             config={{
@@ -20,7 +20,7 @@ const Slide = ({ author, content }) => {
             }}
           />
         </div>
-        <h4 className="uppercase font-bold mt-7 xl:mt-[5px]">{author}</h4>
+        <span className="text-center text-[18px] leading-[26px] font-bold text-[#696969] mt-[11px] lg:mt-[14px]">{author}</span>
       </div>
     </div>
   );
@@ -31,7 +31,7 @@ const ArrowRight = ({ onClick }) => {
 
   return (
     <button
-      className="home-slider-right-arrow mr-[30px] md:mr-20 lg:m-0"
+      className="home-slider-right-arrow hidden lg:block mr-[30px] md:mr-20 lg:m-0"
       onClick={onClick}
     >
       <div className="slider-arrows-shadow">
@@ -47,7 +47,7 @@ const ArrowLeft = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="home-slider-left-arrow ml-[30px] md:ml-20 lg:m-0"
+      className="home-slider-left-arrow hidden lg:block ml-[30px] md:ml-20 lg:m-0"
     >
       <div className="slider-arrows-shadow">
         <img src={arrow} width={isDesktop ? 60 : 37} className="" />

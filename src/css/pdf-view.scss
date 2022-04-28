@@ -1,5 +1,6 @@
 .pdf-view {
   & input,
+  & textarea,
   & .dropdown-wrapper,
   & .my-checkbox {
     box-shadow: none !important;
@@ -17,5 +18,13 @@
   & button,
   & .dropdown-arrow {
     display: none;
+  }
+
+  & .print-hidden {
+    display: none;
+  }
+
+  & .print-visible {
+    display: block;
   }
 }

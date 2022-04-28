@@ -1,0 +1,32 @@
+.staff-section-background {
+  background-image: url("../../../images/home-staff-bg.svg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: bottom 96px right -20px;
+}
+
+.footerGrid {
+  display: grid;
+  row-gap: 32px;
+  grid-template-areas:
+    "titles arrow ."
+    "picture  picture picture";
+  @media (min-width: 1024px) {
+    align-items: center;
+    grid-template-areas: "titles picture arrow";
+  }
+}
+
+.arrow {
+  grid-area: arrow;
+}
+.titles {
+  grid-area: titles;
+}
+.picture {
+  grid-area: picture;
+}
+
+.image-shadow {
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.16));
+}

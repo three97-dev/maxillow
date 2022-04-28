@@ -8,7 +8,7 @@ const Section = ({ title, subTitle, image, description }) => {
     <div className="flex flex-col justify-between">
       <div>
         {/* {title && <h1 className="mb-4">{title}</h1>} */}
-        <h3 className="mb-[50px]">{title}</h3>
+        <h3 className="mb-[50px] font-bold">{title}</h3>
         <div>
           <RRenderer
             data={description}

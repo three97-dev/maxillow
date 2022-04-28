@@ -1,23 +1,25 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+
 import Layout from "../components/Layout";
-import SectionFooter from "./../components/sectionFooter";
-import { HeroSection, Service, Slider } from "../containers/homePage";
+import HeroSection from "../containers/homePage/hero";
+import Slider from "../containers/homePage/slider";
+import Surgery from "../containers/homePage/surgery";
+import Form from "../containers/homePage/form";
+import OurStaff from "../containers/homePage/our-staff";
+import Facilities from "../containers/homePage/facilities";
 
 import "../css/custom_forms_styles.scss";
-import Testimonials from "./../images/testimonails.png";
 
 const IndexPage = ({ data }) => {
-  const heroData = data.allContentfulHeroHomepage;
-  const sectionsData = data.allContentfulSectionsHomepage.edges;
+  const pageData = data.allContentfulHomePage.edges[0].node;
   const testimonials = data.allContentfulTestimonials;
   const doctors = data.doctors.edges;
-
   return (
     <Layout>
-      <div className="home-page-background">
+      <div>
         <HeroSection
-          data={heroData}
+          data={pageData}
           doctors={doctors.sort((a, b) => {
             const firstOrder = a.node.displayOrder;
             const secondOrder = b.node.displayOrder;
@@ -29,41 +31,24 @@ const IndexPage = ({ data }) => {
               return 0;
             }
           })}
-          sections={sectionsData.map(sec => sec.node.title)}
         />
-        {sectionsData.map((v, i) => {
-          return (
-            <Service
-              key={i}
-              isCentered={v.node.isCentered}
-              reverse={v.node.reverse}
-              image={v.node.image}
-              isPadding={false}
-              title={v.node.title}
-              description={v.node.description}
-              first={i === 0}
-              footer={{
-                title: v.node.footerTitle,
-                subTitle: v.node.footerSubtitle,
-                link: v.node.footerLink,
-              }}
-              footer2={i % 2 !== 0}
-              addBlob={i === 0}
-              orangeDots={i}
-              blueDots={i === 2}
-            />
-          );
-        })}
-
-        <Slider
-          src={Testimonials}
-          footerBg="bg-secondary"
-          data={testimonials}
+        <Surgery
+          image={pageData.surgeryImage}
+          title={pageData.surgeryTitle}
+          description={pageData.surgeryDescription}
         />
-        <SectionFooter
-          data={{ subTitle: "Get In", title: "Contact", link: "/contact-us" }}
-          footerBg="bg-secondary"
+        <Slider footerBg="bg-secondary" data={testimonials} />
+        <OurStaff image={pageData.staffImage} title={pageData.staffTitle} description={pageData.staffDescription} />
+        <Facilities
+          images={pageData.facilitiesImages}
+          title={pageData.facilitiesTitle}
+          description={pageData.facilitiesDescription}
+          firstFacility={pageData.firstFacility}
+          secondFacility={pageData.secondFacility}
+          thirdFacility={pageData.thirdFacility}
+          fourthFacility={pageData.fourthFacility}
         />
+        <Form image={pageData.formImage} title={pageData.formTitle} description={pageData.formDescription} />
       </div>
     </Layout>
   );
@@ -71,22 +56,62 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allContentfulHeroHomepage {
+    allContentfulHomePage {
       edges {
         node {
           welcomeTitle
           mainHeading
-          shortDescription
+          heroDescription
           heroImage {
             title
             file {
               url
             }
           }
-          firstDoctor
-          secondDoctor
-          ctaLink
-          ctaText
+          surgeryTitle
+          surgeryDescription {
+            raw
+          }
+          surgeryImage {
+            title
+            file {
+              url
+            }
+          }
+          staffTitle
+          staffDescription {
+            raw
+          }
+          staffImage {
+            title
+            file {
+              url
+            }
+          }
+          facilitiesTitle
+          facilitiesDescription {
+            raw
+          }
+          facilitiesImages {
+            title
+            file {
+              url
+            }
+          }
+          firstFacility
+          secondFacility
+          thirdFacility
+          fourthFacility
+          formTitle
+          formDescription {
+            raw
+          }
+          formImage {
+            title
+            file {
+              url
+            }
+          }
         }
       }
     }

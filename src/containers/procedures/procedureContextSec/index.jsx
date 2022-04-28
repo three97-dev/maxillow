@@ -11,7 +11,7 @@ function Service({ title, description, noBottomBorder, first }) {
             data={description}
             config={{
               p: "mb-6",
-              h4: "mb-3",
+              h4: "mb-3 font-bold text-[22px] leading-[26px]",
             }}
           />
         </div>

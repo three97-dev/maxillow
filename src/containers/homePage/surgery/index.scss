@@ -1,0 +1,11 @@
+.markdown_paragraph:not(:first-child) {
+  margin-top: 20px;
+}
+
+.backgroundImage {
+  background-image: url("../../../images/surgery/Background.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: 100%;
+}

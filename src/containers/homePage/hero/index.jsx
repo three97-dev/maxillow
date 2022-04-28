@@ -3,9 +3,9 @@ import { getSrcSet, useWindowSize } from "../../../hooks/getWidth";
 
 import "./index.scss";
 
-function HeroSection({ doctors, sections, ...props }) {
-  const { welcomeTitle, mainHeading, shortDescription, heroImage } =
-    props.data.edges[0].node;
+function HeroSection({ doctors, ...props }) {
+  const { welcomeTitle, mainHeading, heroDescription, heroImage } =
+    props.data;
 
   const imgRef = useRef(null);
   const imgSize = useWindowSize(imgRef);
@@ -27,36 +27,31 @@ function HeroSection({ doctors, sections, ...props }) {
         <div className="home-hero-intro-wrapper">
           <div className="home-hero-intro">
             <div className="w-full md:w-[500px] lg:w-[443px] mx-auto">
-              <h6 className="uppercase text-[14px] leading-[18px] mt-[-2px] sm:mt-[-1px]">
-                {welcomeTitle}
-              </h6>
-              <h1 className="uppercase py-3 font-medium mt-[-4px] sm:mt-0 lg:mt-[-5px]">
+              <h4 className="uppercase mt-[-2px] sm:mt-[-1px]">{welcomeTitle}</h4>
+              <h1 className="tracking-[0.4px] font-NeutraDisplay font-bold text-[#473C3F] uppercase py-3 mt-[-4px] sm:mt-0 lg:mt-[-5px]">
                 {mainHeading}
               </h1>
-              <p className="text-[14px] md:text-[16px] leading-[22px] mt-[1px] md:mt-[13px]">
-                {shortDescription}
-              </p>
+              <div className="lg:text-[#696969] mt-[1px] md:mt-[13px]">{heroDescription}</div>
             </div>
           </div>
         </div>
-
-        <div className="home-hero-bar">
-          <div className="flex content-center items-center h-full">
-            {doctors.map(({ node: { title } }, i) => {
-              const isLastDoctor = i === doctors.length - 1;
-              return (
-                <div
-                  className={`flex text-center items-center w-full h-[30px] 2xl:h-[40px] ${
-                    !isLastDoctor ? "border-r border-secondary" : ""
-                  }`}
-                >
-                  <h6 className="flex-1 uppercase text-[#2D2D2D] text-[14px] leading-[18px] 2xl:font-semibold">
-                    {title}
-                  </h6>
-                </div>
-              );
-            })}
-          </div>
+      </div>
+      <div className="home-hero-bar">
+        <div className="flex content-center items-center h-full">
+          {doctors.map(({ node: { title } }, i) => {
+            const isLastDoctor = i === doctors.length - 1;
+            return (
+              <div
+                className={`flex text-center items-center w-full h-[30px] 2xl:h-[40px] ${
+                  !isLastDoctor ? "border-r border-secondary" : ""
+                }`}
+              >
+                <h4 className="flex-1 uppercase text-[#473C3F] 2xl:font-semibold">
+                  {title}
+                </h4>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

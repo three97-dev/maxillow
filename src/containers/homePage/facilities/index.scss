@@ -1,0 +1,44 @@
+.facilitiesGrid {
+  display: grid;
+  grid-template-areas: 
+    "titles"
+    "pictures"
+    "facilities";
+  @media (min-width: 1024px) {
+    grid-template-areas: 
+    "titles facilities"
+    "pictures pictures";
+  }
+}
+
+.facilities {
+  grid-area: facilities;
+}
+.titles {
+  grid-area: titles;
+}
+.pictures {
+  grid-area: pictures;
+}
+
+.images-background {
+  background-color: rgba(224, 224, 224);
+}
+
+.scroll-bar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+  background-color: rgba(224, 224, 224);
+}
+
+.scroll-bar::-webkit-scrollbar { 
+  display: none;  
+}
+
+.markdown_paragraph:not(:first-child) {
+  margin-top: 20px;
+}
+
+.image-item:not(:last-child) {
+  margin-right: 16px;
+}

@@ -81,9 +81,12 @@ const NewPatientFormPage = () => {
         action="/"
         onSubmit={handleSubmit}
       >
+        <input type="hidden" name="form-name" value="new-patient" />
+        <input name="bot-field" className="hidden" />
         <Form_1 />
         <Form_2 />
         <Form_3 />
+        <input name="pdfFile" type="file" className="hidden" />
       </form>
     </Layout>
   );

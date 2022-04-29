@@ -19,13 +19,13 @@ const Form = () => {
   return (
     <form
       id="contact-form"
-      name="contact"
+      name="contact-homepage"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="contact-form" value="contact" />
+      <input type="hidden" name="form-name" value="contact-homepage" />
       <input name="bot-field" className="hidden" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[17px] gap-y-[15px] mb-[15px]">
         <Input name="First name" placeholder="First name" />

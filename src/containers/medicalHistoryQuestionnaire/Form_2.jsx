@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Checkbox from "../../components/form/Checkbox";
 import RadioButtonsGroup from "../../components/form/RadioButtonsGroup";
 import Textarea from "../../components/form/Textarea";
 
 const Form_2 = () => {
+  const [diabetesSelected, setDiabetesSelected] = useState(false);
   return (
     <div className="px-[30px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] pt-5 lg:py-10">
       <h2>Pre-Existing Medical Conditions</h2>
@@ -50,14 +51,22 @@ const Form_2 = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-4">
           <div className="flex items-center justify-between">
-            <Checkbox label="Diabetes" name="Pre-Existing Medical Conditions[]" value="Diabetes" />
-            <span className="hidden md:inline text-right ml-1">Please Describe:</span>
+            <Checkbox
+              label="Diabetes"
+              name="Pre-Existing Medical Conditions[]"
+              value="Diabetes"
+              onChange={(value) => setDiabetesSelected(value)}
+            />
+            <span className={`hidden md:inline text-right ml-1 ${!diabetesSelected && "invisible"}`}>
+              Please Describe:
+            </span>
           </div>
           <div className="flex mx-auto md:m-0">
             <RadioButtonsGroup
               name="Diabetes Type"
               options={["Type 1", "Type 2"]}
               className="mt-0.5 ml-4 first:ml-0 mb-0"
+              isHidden={!diabetesSelected}
             />
           </div>
         </div>

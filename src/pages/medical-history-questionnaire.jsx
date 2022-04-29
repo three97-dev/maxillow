@@ -74,7 +74,7 @@ const MedicalHistoryQuestionnairePage = () => {
       <Cta />
       <form
         id="formToPrint"
-        name="new-patient"
+        name="medical-history-questionnaire"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"

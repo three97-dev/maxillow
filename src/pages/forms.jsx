@@ -29,7 +29,7 @@ const FormsPage = ({ data }) => {
           <RRenderer
             data={formsPageData.description1}
             config={{
-              p: "mb-[20px] lg:text-[24px] leading-[22px] lg:leading-[30px]",
+              p: "mb-[20px]",
             }}
           />
           <div className="mt-[50px]">
@@ -51,9 +51,6 @@ const FormsPage = ({ data }) => {
           </h2>
           <RRenderer
             data={formsPageData.description2}
-            config={{
-              p: "lg:text-[24px] leading-[22px] lg:leading-[30px]",
-            }}
           />
           <div className="flex items-center mt-[28px] lg:mt-[45px] mb-[20px] lg:mb-[40px]">
             <img

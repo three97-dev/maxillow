@@ -9,7 +9,7 @@ function FormSection({ image, title, description }) {
   return (
     <div className="form-section-background py-16 px-[30px]">
       <div className="max-w-[1261px] mx-auto">
-        <h2 className="text-center pb-8 lg:pb-[30px]">{title}</h2>
+        <h2 className="text-left md:text-center pb-8 lg:pb-[30px]">{title}</h2>
         <RRenderer
           data={description}
           config={{

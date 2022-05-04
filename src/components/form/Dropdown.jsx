@@ -22,7 +22,7 @@ const Dropdown = ({ option, placeholder, name, label, className }) => {
     <div className={`grid gap-y-4 md:gap-y-5 my-2.5 md:my-[10px] ${className}`}>
       <h3>{label}</h3>
       <div
-        className="dropdown-wrapper w-full rounded-lg outline-none border-none newInsetShadow overflow-hidden relative"
+        className="dropdown-wrapper w-full rounded-lg outline-none border-none newInsetShadow overflow-hidden relative cursor-pointer"
         role="dd-wrapper"
       >
         <div
@@ -40,7 +40,7 @@ const Dropdown = ({ option, placeholder, name, label, className }) => {
         {active && (
           <div role="list" role="dd-list">
             {option.map((opt, idx) => (
-              <div className="hover:bg-[#91d6e3] p-3" role="dd-list-item" key={idx} value={opt} onClick={handleSelect}>
+              <div className="hover:bg-[#91d6e3] py-3.5 px-5" role="dd-list-item" key={idx} value={opt} onClick={handleSelect}>
                 {opt}
               </div>
             ))}

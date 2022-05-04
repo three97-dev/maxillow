@@ -15,7 +15,7 @@ const Form_1 = () => {
           placeholder="Please select"
           name="Title"
           label="Title:"
-          option={["Option 1", "Option 2", "Option 3"]}
+          option={["Dr.", "Mr.", "Mrs.", "Ms.", "Miss.", "Mstr."]}
           className="mt-6 lg:mt-[28px]"
         />
       </div>
@@ -24,7 +24,7 @@ const Form_1 = () => {
         <Input label="Last Name:" name="Last Name" />
         <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2">
           <Input label="Middle Initial:" name="Middle Initial" />
-          <Input label="Date of Birth:" name="Date of Birth" />
+          <Input label="Date of Birth:" name="Date of Birth" type="date" placeholder="(D/M/Y)" />
         </div>
       </div>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">

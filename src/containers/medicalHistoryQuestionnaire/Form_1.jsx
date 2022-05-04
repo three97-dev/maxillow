@@ -8,7 +8,7 @@ const Form_1 = () => {
     <div className="px-[30px] pt-12 md:pt-[60px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
       <h2>Medical History</h2>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        <Input label="Date:" name="Date" className="mt-6 lg:mt-[28px]" />
+        <Input label="Date:" name="Date" type="date" placeholder="(D/M/Y)" className="mt-6 lg:mt-[28px]" />
       </div>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <Input label="First Name:" name="First Name" />

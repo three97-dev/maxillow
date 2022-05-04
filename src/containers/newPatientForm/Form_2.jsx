@@ -4,7 +4,8 @@ import Input from "../../components/form/Input";
 const Form_2 = () => {
   return (
     <div className="px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] pt-0 lg:py-[27px]">
-      <h2>Responsible Party</h2>
+      <h2 className="inline">Responsible Party</h2>
+      <h3 className="sm:inline sm:ml-[20px]">(if patient is under 18 years old)</h3>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:mt-5">
         <Input label="First Name:" name="First Name (Responsible Party)" className="mt-3" />
         <Input label="Last Name:" name="Last Name (Responsible Party)" />

@@ -2,6 +2,8 @@ import * as React from "react";
 import { navigate } from "gatsby";
 import html2canvas from "../html2canvas";
 import jsPDF from "jspdf";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 import Layout from "../components/Layout";
 import Cta from "../containers/medicalHistoryQuestionnaire/Cta";
@@ -18,9 +20,7 @@ const MedicalHistoryQuestionnairePage = () => {
     return formData;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const handleSubmit = () => {
     const input = document.getElementById("formToPrint");
     html2canvas(input, {
       windowWidth: 1920,
@@ -69,6 +69,22 @@ const MedicalHistoryQuestionnairePage = () => {
     });
   };
 
+  const medicalHistoryQuestionnaireSchema = Yup.object({
+    diabetesType: Yup.string().when("diabetesSelected", { is: true, then: Yup.string().required() }),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      diabetesSelected: false,
+      diabetesType: "",
+    },
+    validationSchema: medicalHistoryQuestionnaireSchema,
+    validateOnChange: false,
+    onSubmit: () => {
+      handleSubmit();
+    },
+  });
+
   return (
     <Layout>
       <Cta />
@@ -79,13 +95,13 @@ const MedicalHistoryQuestionnairePage = () => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         action="/"
-        onSubmit={handleSubmit}
+        onSubmit={formik.handleSubmit}
       >
         <input type="hidden" name="form-name" value="medical-history-questionnaire" />
         <input name="bot-field" className="hidden" />
         <Form_1 />
-        <Form_2 />
-        <Form_3 />
+        <Form_2 formik={formik} />
+        <Form_3 formik={formik} />
         <input name="pdfFile" type="file" className="hidden" />
       </form>
     </Layout>

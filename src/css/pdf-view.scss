@@ -1,4 +1,8 @@
 .pdf-view {
+  & * {
+    color: black !important;
+  }
+
   & input,
   & textarea,
   & .dropdown-wrapper,

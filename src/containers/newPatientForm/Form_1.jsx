@@ -6,9 +6,9 @@ import RadioButtonsGroup from "../../components/form/RadioButtonsGroup";
 const areYouAStudentOptions = ["Yes, Full-Time", "Yes, Part-Time", "No, I’m not a student"];
 const insuranceCoverageOptions = ["Yes", "No, I opted out"];
 
-const Form_1 = () => {
+const Form_1 = ({ formik }) => {
   return (
-    <div className="px-[30px] pt-12 md:pt-16 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
+    <div className="px-[30px] pt-12 md:pt-16 px-[30px] lg:px-[81px] 2xl:px-[140px]">
       <h2>Personal Information</h2>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <Dropdown
@@ -20,17 +20,57 @@ const Form_1 = () => {
         />
       </div>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        <Input label="First Name:" name="First Name" />
-        <Input label="Last Name:" name="Last Name" />
+        <Input
+          label="First Name:"
+          name="firstName"
+          value={formik.values.firstName}
+          onChange={formik.handleChange}
+          isError={formik.errors.firstName}
+        />
+        <Input
+          label="Last Name:"
+          name="lastName"
+          value={formik.values.lastName}
+          onChange={formik.handleChange}
+          isError={formik.errors.lastName}
+        />
         <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2">
           <Input label="Middle Initial:" name="Middle Initial" />
-          <Input label="Date of Birth:" name="Date of Birth" type="date" placeholder="(D/M/Y)" />
+          <Input
+            label="Date of Birth:"
+            name="dateOfBirth"
+            type="date"
+            placeholder="(D/M/Y)"
+            value={formik.values.dateOfBirth}
+            onChange={formik.handleChange}
+            isError={formik.errors.dateOfBirth}
+          />
         </div>
       </div>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <Input label="Primary Phone:" name="Primary Phone" />
         <Input label="Alternate Phone:" name="Alternate Phone" />
         <Input label="Email Address:" name="Email Address" type="email" />
+      </div>
+      <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        <Input
+          label="Mailing Address:"
+          name="mailingAddress"
+          value={formik.values.mailingAddress}
+          onChange={formik.handleChange}
+          isError={formik.errors.mailingAddress}
+        />
+        <Input
+          label="City/Town:"
+          name="city"
+          value={formik.values.city}
+          onChange={formik.handleChange}
+          isError={formik.errors.city}
+        />
+        <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2">
+          <Input label="Province:" name="Province" />
+          <Input label="Postal Code:" name="Postal Code" />
+        </div>
       </div>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <Input label="Patients Dentist:" name="Patients Dentist" />

@@ -5,7 +5,7 @@ import Textarea from "../../components/form/Textarea";
 
 const Form_2 = ({ formik }) => {
   return (
-    <div className="px-[30px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] pt-5 lg:py-10">
+    <div className="px-[30px] px-[30px] lg:px-[81px] 2xl:px-[140px] pt-5 lg:py-10">
       <h2>Pre-Existing Medical Conditions</h2>
       <div className="grid gap-y-0.5 md:gap-y-5 content-between my-4 md:mt-4 md:mb-8">
         <h3 className="hidden md:inline">Please check any and all of the conditions that apply:</h3>
@@ -72,7 +72,6 @@ const Form_2 = ({ formik }) => {
           </div>
         </div>
       </div>
-      <div className="hidden print-visible mt-[180px]"></div>
       <Textarea
         label="Please list any other health issues of which we should be aware:"
         name="Please list any other health issues of which we should be aware"

@@ -42,8 +42,8 @@ const NewPatientFormPage = () => {
   const handleSubmit = () => {
     const input = document.getElementById("formToPrint");
     html2canvas(input, {
-      windowWidth: 1920,
-      scale: 1,
+      windowWidth: 1400,
+      scale: 1.5,
       onclone: function (document) {
         document.querySelector("body").className += "pdf-view";
       },
@@ -91,6 +91,11 @@ const NewPatientFormPage = () => {
   const stringRequiredInput = Yup.string().when("noDentalInsurance", { is: false, then: Yup.string().required() });
 
   const newPatientSchema = {
+    firstName: Yup.string().required(),
+    lastName: Yup.string().required(),
+    dateOfBirth: Yup.string().required(),
+    mailingAddress: Yup.string().required(),
+    city: Yup.string().required(),
     insuranceCompany: stringRequiredInput,
     groupPlan: stringRequiredInput,
     contractCert: stringRequiredInput,
@@ -134,6 +139,11 @@ const NewPatientFormPage = () => {
 
   const formik = useFormik({
     initialValues: {
+      firstName: "",
+      lastName: "",
+      dateOfBirth: "",
+      mailingAddress: "",
+      city: "",
       noDentalInsurance: false,
       insuranceCompany: "",
       groupPlan: "",
@@ -178,7 +188,7 @@ const NewPatientFormPage = () => {
       >
         <input type="hidden" name="form-name" value="new-patient" />
         <input name="bot-field" className="hidden" />
-        <Form_1 />
+        <Form_1 formik={formik} />
         <Form_2 />
         <Form_3
           formik={formik}

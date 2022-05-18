@@ -12,7 +12,7 @@ const Form_3 = ({
   onAdditionalInsuranceRemove,
 }) => {
   return (
-    <div className="px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] py-6">
+    <div className="px-[30px] lg:px-[81px] 2xl:px-[140px] py-6">
       <div className="flex flex-col lg:flex-row lg:items-center">
         <h2 className="mb-5 lg:mb-0 lg:mr-5">Primary Insurance Information</h2>
         <Checkbox
@@ -82,6 +82,7 @@ const Form_3 = ({
               isError={formik.errors.employer}
             />
           </div>
+          <div className="hidden print-visible mt-[180px]"></div>
         </>
       )}
       {!formik.values.noDentalInsurance && additionalInsurance1 && (
@@ -210,7 +211,6 @@ const Form_3 = ({
               isError={formik.errors.subscriberDOB3}
             />
           </div>
-          <div className="hidden print-visible mt-[220px]"></div>
           <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             <Input
               label="Employer:"

@@ -23,8 +23,8 @@ const MedicalHistoryQuestionnairePage = () => {
   const handleSubmit = () => {
     const input = document.getElementById("formToPrint");
     html2canvas(input, {
-      windowWidth: 1920,
-      scale: 1,
+      windowWidth: 1400,
+      scale: 1.5,
       onclone: function (document) {
         document.querySelector("body").className += "pdf-view";
       },
@@ -70,6 +70,8 @@ const MedicalHistoryQuestionnairePage = () => {
   };
 
   const medicalHistoryQuestionnaireSchema = Yup.object({
+    firstName: Yup.string().required(),
+    lastName: Yup.string().required(),
     diabetesType: Yup.string().when("diabetesSelected", { is: true, then: Yup.string().required() }),
   });
 
@@ -99,7 +101,7 @@ const MedicalHistoryQuestionnairePage = () => {
       >
         <input type="hidden" name="form-name" value="medical-history-questionnaire" />
         <input name="bot-field" className="hidden" />
-        <Form_1 />
+        <Form_1 formik={formik} />
         <Form_2 formik={formik} />
         <Form_3 formik={formik} />
         <input name="pdfFile" type="file" className="hidden" />

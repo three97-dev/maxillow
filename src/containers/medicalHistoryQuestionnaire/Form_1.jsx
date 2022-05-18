@@ -3,16 +3,28 @@ import Input from "../../components/form/Input";
 import Textarea from "../../components/form/Textarea";
 import RadioButtonsGroup from "../../components/form/RadioButtonsGroup";
 
-const Form_1 = () => {
+const Form_1 = ({ formik }) => {
   return (
-    <div className="px-[30px] pt-12 md:pt-[60px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
+    <div className="px-[30px] pt-12 md:pt-[60px] px-[30px] lg:px-[81px] 2xl:px-[140px]">
       <h2>Medical History</h2>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <Input label="Date:" name="Date" type="date" placeholder="(D/M/Y)" className="mt-6 lg:mt-[28px]" />
       </div>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        <Input label="First Name:" name="First Name" />
-        <Input label="Last Name:" name="Last Name" />
+        <Input
+          label="First Name:"
+          name="firstName"
+          value={formik.values.firstName}
+          onChange={formik.handleChange}
+          isError={formik.errors.firstName}
+        />
+        <Input
+          label="Last Name:"
+          name="lastName"
+          value={formik.values.lastName}
+          onChange={formik.handleChange}
+          isError={formik.errors.lastName}
+        />
       </div>
       <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <div className="grid grid-cols-1 2xl:grid-cols-2 gap-x-4">
@@ -167,6 +179,7 @@ const Form_1 = () => {
               className="ml-8 first:ml-0 mb-0"
             />
           </div>
+          <div className="hidden print-visible mt-[70px]"></div>
         </div>
         <div className="grid gap-y-4 md:gap-y-9 content-between w-full my-2 md:mt-2.5">
           <h3>Have you or anyone in your family ever been diagnosed with Malignant Hyperthermia?</h3>

@@ -4,7 +4,7 @@ import RadioButtonsGroup from "../../components/form/RadioButtonsGroup";
 
 const Form_3 = ({ formik }) => {
   return (
-    <div className="px-[30px] px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px] py-5 md:pt-4 md:pb-7">
+    <div className="px-[30px] px-[30px] lg:px-[81px] 2xl:px-[140px] py-5 md:pt-4 md:pb-7">
       <h2>Additional Details</h2>
       <div className="grid gap-y-4 content-between md:w-[650px] my-2.5 md:mt-4">
         <h3>Please provide your approximate:</h3>
@@ -35,6 +35,7 @@ const Form_3 = ({ formik }) => {
           </div>
         </div>
       </div>
+      <div className="hidden print-visible mt-[110px]"></div>
       <hr className="mt-8 mb-7 md:my-16 border-[#707070]" />
       <h3>I certify that the above information is accurate to the best of my knowledge:</h3>
       <div className="mt-[5px] md:mt-[26px] grid gap-x-4 grid-cols-1 md:grid-cols-[66.4%,auto]">

@@ -2,7 +2,7 @@ import React from "react";
 
 const Form_5 = () => {
   return (
-    <div className="p-8 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
+    <div className="px-[30px] lg:px-[81px] 2xl:px-[140px] py-6">
       <input
         name="Referring Doctor Signature"
         placeholder="Referring Doctor Signature"

@@ -6,7 +6,7 @@ const Form_4 = () => {
   const [additionalNotesTextareaValue, setAdditionalNotesTextareaValue] = useState("");
 
   return (
-    <div className="p-8 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
+    <div className="px-[30px] lg:px-[81px] 2xl:px-[140px] py-6">
       <h1>Patient Details</h1>
 
       <div className="flex flex-col md:flex-row justify-between">
@@ -77,6 +77,7 @@ const Form_4 = () => {
           />
         </div>
       </div>
+      <div className="hidden print-visible mt-[220px]"></div>
       <div>
         <textarea
           name="Medical Alert"

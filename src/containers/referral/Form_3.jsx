@@ -5,7 +5,7 @@ const Form_2 = () => {
   const [insuranceInformationTextareaValue, setInsuranceInformationTextareaValue] = useState("");
 
   return (
-    <div className="p-8 pt-10 px-[30px] md:px-[81px] lg:px-[142px] 2xl:px-[140px]">
+    <div className="px-[30px] lg:px-[81px] 2xl:px-[140px] py-6">
       <h1>Patient Information</h1>
 
       <div className="flex flex-col md:flex-row justify-between">

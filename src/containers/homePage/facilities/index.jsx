@@ -36,7 +36,7 @@ function Facilities({ images, title, description, firstFacility, secondFacility,
             </Link>
           </div>
         </div>
-        <div className="pictures images-background mb-8 lg:mb-0 overflow-hidden py-4 pl-4 lg:p-4 rounded-l-[10px] lg:rounded-[10px]">
+        <div className="pictures images-background mb-8 lg:mb-0 lg:-mx-2 max-w-[1672px] overflow-hidden py-4 pl-4 lg:p-4 rounded-l-[10px] lg:rounded-[10px]">
           <div className="scroll-bar overflow-x-auto">
             <ul className="flex">
               {images.map((image, index) => (

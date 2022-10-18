@@ -25,7 +25,7 @@ function Doctor2({ title, description, src, quote, doctor }) {
                 <RRenderer
                   data={description}
                   config={{
-                    p: "mt-4",
+                    p: "my-4",
                   }}
                 />
               </div>
